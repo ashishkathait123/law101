@@ -25,20 +25,20 @@ const Footer = () => {
                         Our Details
                         <div className="pt-6 flex flex-col gap-2     ">
                             <a href="#">
-                                123 Street Name <br />
-                                City,
+                               Bangali kothi <br />
+                                Dehradun,
                                 <br />
-                                Country, <br />
-                                PostCode
+                                248001, <br />
+                                
                             </a>
-                            <a href="#">Pinfo@Buildingonlinedevs.com</a>
+                            <a href="#">temp@gmail.com</a>
                         </div>
                     </div>
                 </div>
                 <div className="">
                     <img src="/images/footer-logo.png" className="w-28 m-auto lg:ml-0 rounded-md" alt="" />
                     <div className="py-6 flex flex-col text-sm font-light   ">
-                        Copyright © 2023 techTitans All Rights Reserved.
+                        Copyright © 2025 All Rights Reserved Powerd By GrandeuNet.
                     </div>
                     <img src="/images/footer-banks.png" className="w-48 m-auto lg:ml-0" alt="" />
                 </div>

@@ -38,8 +38,8 @@ function Feedbacks() {
                 <div className="w-full">
                   <h4 className="text-dark mb-1  font-bold">Our Location</h4>
                   <p className="text-body-color text-base">
-                    4R5Q+24W, Irla, N. R. G Marg, opposite Cooper Hospital, Vile
-                    Parle, Mumbai, Maharashtra 400056
+                    Deharadun 
+                   Uttarakhand, India
                   </p>
                   <a
                     href="https://goo.gl/maps/68B7YGrNiu2Qx7166"
@@ -67,16 +67,15 @@ function Feedbacks() {
                   <h4 className="text-dark mb-1 text- font-bold">Phone Number</h4>
                   <p className="text-blue-900 text-base">
                     <a href="tel:+91 80800 59971">
-                      +91 80800 59971 (Shivani Mehta)
+                      0987654321
                     </a>
                   </p>
                   <p className="text-blue-900 text-base">
                     <a href="tel:+91 98209 77111">
-                      +91 98209 77111 (Payu Mane)
-                    </a>
+0987654321                    </a>
                   </p>
                   <p className="text-blue-900 text-base">
-                    <a href="tel:+91 86576 29668">+91 86576 29668 (Kartik)</a>
+                    <a href="tel:+91 86576 29668">0987654321</a>
                   </p>
                 </div>
               </div>
@@ -94,7 +93,7 @@ function Feedbacks() {
                 <div className="w-full">
                   <h4 className="text-dark mb-1 text- font-bold">Email Address</h4>
                   <p className="text-body-color text-base">
-                    teamace.sbmp@gmail.com
+                    teamace.exmaple@gmail.com
                   </p>
                 </div>
               </div>
