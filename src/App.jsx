@@ -9,6 +9,7 @@ import { Admin, BenefitsCard, Feedbacks, Footer, HomeHero, LawFirms, LawyerPortf
 import "./App.css";
 import Root from "./Root";
 import { GetUpdates } from "./components/elements";
+import Docter from "./components/Docter/docter";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -33,6 +34,7 @@ const Homepage = () => {
   return (<>
     <HomeHero />
     <BenefitsCard />
+    <Docter/>
     <LawFirms />
     <Testimonails />
     {/* <GetUpdates /> */}
