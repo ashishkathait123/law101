@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
+const API_BASE_URL = "https://lawyerbackend-qrqa.onrender.com";
+
 const ProfilePage = () => {
   const { state } = useLocation();
   const { lawyer } = state || {};
@@ -38,13 +40,25 @@ const ProfilePage = () => {
         <div className="bg-gradient-to-r from-blue-900 to-blue-700 p-6 text-white mt-14">
           <div className="flex flex-col md:flex-row items-start md:items-center">
             <div className="relative mb-4 md:mb-0 md:mr-6">
-              <div className="h-32 w-32 rounded-full bg-white flex items-center justify-center text-blue-800 text-4xl font-bold uppercase border-4 border-white">
-                {(lawyer.name || "NA")
-                  .split(" ")
-                  .map((word) => word[0])
-                  .join("")
-                  .slice(0, 2)}
-              </div>
+              {lawyer.lawyerImage ? (
+                <img 
+                  src={`${API_BASE_URL}${lawyer.lawyerImage}`}
+                  alt={lawyer.name}
+                  className="h-32 w-32 rounded-full object-cover border-4 border-white"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://via.placeholder.com/150";
+                  }}
+                />
+              ) : (
+                <div className="h-32 w-32 rounded-full bg-white flex items-center justify-center text-blue-800 text-4xl font-bold uppercase border-4 border-white">
+                  {(lawyer.name || "NA")
+                    .split(" ")
+                    .map((word) => word[0])
+                    .join("")
+                    .slice(0, 2)}
+                </div>
+              )}
               <MdVerified className="absolute bottom-0 right-0 text-blue-300 text-3xl bg-white rounded-full" />
             </div>
             <div className="flex-1">

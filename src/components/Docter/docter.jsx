@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+const API_BASE_URL = "https://lawyerbackend-qrqa.onrender.com";
 
 const LawyerCard = () => {
   const [lawyers, setLawyers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const interactionMode = location.state?.mode || "chat"; // "chat" or "call"
 
   useEffect(() => {
     const fetchLawyers = async () => {
       try {
-        const response = await axios.get(
-          'https://lawyerbackend-qrqa.onrender.com/lawapi/common/lwayerlist'
-        );
+        const response = await axios.get(`${API_BASE_URL}/lawapi/common/lwayerlist`);
         const lawyersData = Array.isArray(response.data.data) ? response.data.data : [];
         const experiencedLawyers = lawyersData.filter(lawyer => lawyer.experience >= 3);
         setLawyers(experiencedLawyers);
@@ -73,13 +75,25 @@ const LawyerCard = () => {
           >
             <div className="p-6">
               <div className="flex items-center mb-4">
-                <div className="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl font-bold uppercase">
-                  {(lawyer.name || 'NA')
-                    .split(' ')
-                    .map(word => word[0])
-                    .join('')
-                    .slice(0, 2)}
-                </div>
+                {lawyer.lawyerImage ? (
+                  <img 
+                    src={`${API_BASE_URL}${lawyer.lawyerImage}`}
+                    alt={lawyer.name}
+                    className="h-16 w-16 rounded-full object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://via.placeholder.com/150";
+                    }}
+                  />
+                ) : (
+                  <div className="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl font-bold uppercase">
+                    {(lawyer.name || 'NA')
+                      .split(' ')
+                      .map(word => word[0])
+                      .join('')
+                      .slice(0, 2)}
+                  </div>
+                )}
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-800">{lawyer.name}</h3>
                   <p className="text-blue-600 text-sm">{lawyer.specialization}</p>
@@ -134,7 +148,7 @@ const LawyerCard = () => {
                     }
                     className="bg-gradient-to-r from-[rgb(40,62,81)] to-[rgb(72,85,99)] text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 text-sm"
                   >
-                    Chat Now
+                    {interactionMode === "call" ? "Call Now" : "Chat Now"}
                   </button>
                 </div>
               </div>
