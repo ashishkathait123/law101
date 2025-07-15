@@ -13,15 +13,58 @@ const HomeHero = () => {
       case "call":
         navigate("/chat", { state: { mode: "call" } });
         break;
+      case "document":
+        navigate("/document");
+        break;
       case "appointment":
- window.open(
-                        "https://law-consultancy-firms-git-law-ashish8.vercel.app/",
-                        "_blank"
-                      );        break;
+        window.open(
+          "https://law-consultancy-firms-git-low3-ashish8.vercel.app/",
+          "_blank"
+        );
+        break;
       default:
         console.log("No route defined for:", option);
     }
   };
+
+  // Define color schemes for each option
+  const optionStyles = {
+    chat: {
+      bgFrom: "from-pink-500",
+      bgTo: "to-pink-600",
+      hoverBg: "rgba(236, 72, 153, 0.1)",
+      textColor: "text-pink-600",
+      iconColor: "text-pink-500"
+    },
+    call: {
+      bgFrom: "from-green-500",
+      bgTo: "to-green-600",
+      hoverBg: "rgba(16, 185, 129, 0.1)",
+      textColor: "text-green-600",
+      iconColor: "text-green-500"
+    },
+    document: {
+      bgFrom: "from-orange-500",
+      bgTo: "to-orange-600",
+      hoverBg: "rgba(249, 115, 22, 0.1)",
+      textColor: "text-orange-600",
+      iconColor: "text-orange-500"
+    },
+    appointment: {
+      bgFrom: "from-gray-700",
+      bgTo: "to-gray-900",
+      hoverBg: "rgba(0, 0, 0, 0.1)",
+      textColor: "text-gray-700",
+      iconColor: "text-gray-500"
+    }
+  };
+
+  const options = [
+    { text: "Chat with Lawyer", icon: "💬", action: "chat" },
+    { text: "Talk to Lawyer", icon: "📞", action: "call" },
+  { text: "Legal Documentary", icon: "📚", action: "document" }, 
+    { text: "Allotment of Lawyer", icon: "📅", action: "appointment" },
+  ];
 
   return (
     <section
@@ -93,32 +136,31 @@ const HomeHero = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            {[
-              { text: "Chat with Lawyer", icon: "💬", action: "chat" },
-              { text: "Talk to Lawyer", icon: "📞", action: "call" },
-              { text: "Legal Resources", icon: "📚", action: "resources" },
-              { text: "Book Appointment", icon: "📅", action: "appointment" },
-            ].map((item, index) => (
-              <motion.button
-                key={index}
-                className="bg-gradient-to-r from-[rgb(40,62,81)] to-[rgb(72,85,99)] hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-xl p-5 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                whileHover={{
-                  y: -5,
-                  backgroundColor: "rgba(219, 234, 254, 0.7)",
-                }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() => handleOptionClick(item.action)}
-              >
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl mb-3 group-hover:text-blue-600 transition-colors">
-                    {item.icon}
-                  </span>
-                  <p className="font-medium text-gray-700 dark:text-gray-200 group-hover:text-blue-600 transition-colors text-lg">
-                    {item.text}
-                  </p>
-                </div>
-              </motion.button>
-            ))}
+            {options.map((item, index) => {
+              const style = optionStyles[item.action];
+              return (
+                <motion.button
+                  key={index}
+                  className={`bg-gradient-to-r ${style.bgFrom} ${style.bgTo} text-white hover:bg-opacity-10 border border-transparent rounded-xl p-5 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50`}
+                  whileHover={{
+                    y: -5,
+                    backgroundColor: style.hoverBg,
+                    color: style.textColor
+                  }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => handleOptionClick(item.action)}
+                >
+                  <div className="flex flex-col items-center">
+                    <span className={`text-3xl mb-3 ${style.iconColor} transition-colors`}>
+                      {item.icon}
+                    </span>
+                    <p className="font-medium text-white group-hover:text-current transition-colors text-lg">
+                      {item.text}
+                    </p>
+                  </div>
+                </motion.button>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>

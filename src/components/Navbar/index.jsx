@@ -34,6 +34,7 @@ const Navbar = () => {
     // { id: "testimonials", label: "Testimonials", route: "/" },
     { id: "chat", label: "Chat With Lawyer", route: "/chat" },
     { id: "document", label: "Documentary Lawyers", route: "/document" },
+    { id: "allotment", label: "Alloted Lawyers", route: "/allotment" },
   ];
 
   const mobileMenuVariants = {
@@ -128,7 +129,7 @@ const Navbar = () => {
               }
               className="bg-gradient-to-r from-[rgb(40,62,81)] to-[rgb(72,85,99)] text-white px-4 lg:px-6 py-2 rounded-lg font-medium shadow-lg hover:shadow-blue-200 transition-all"
             >
-              Register Now
+              Register/Login Now
             </motion.button>
           </div>
 
@@ -198,7 +199,7 @@ const Navbar = () => {
                     }
                     className="w-full text-left px-4 py-3 rounded-lg bg-gradient-to-r from-[rgb(40,62,81)] to-[rgb(72,85,99)] text-white font-medium"
                   >
-                    Register Now
+                    Register/Login Now
                   </button>
                 </motion.li>
               </motion.ul>
