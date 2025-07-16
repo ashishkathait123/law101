@@ -40,12 +40,13 @@ function App() {
 const Homepage = () => {
   return (<>
     <HomeHero />
-    <BenefitsCard />
+    {/* <BenefitsCard /> */}
     <Docter/>
-    <LawFirms />
-    <Testimonails />
-    {/* <GetUpdates /> */}
+    {/* <LawFirms /> */}
+    {/* <Testimonails /> */}
+   
     <Feedbacks />
+     <GetUpdates />
   </>
   )
 }

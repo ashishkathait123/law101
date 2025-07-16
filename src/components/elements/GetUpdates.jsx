@@ -2,21 +2,34 @@ import React from 'react'
 
 const GetUpdates = () => {
     return (
-        <div className="mx-auto my-24 flex h-52 w-[780px] flex-col rounded-lg bg-white font-serif text-black shadow-xl">
-            <div className="mt-4">
-                <h1 className="mx-11 my-1 font-bold text-[20px] text-gray-600">Get more updates...</h1>
-            </div>
-            <div className="mx-11 mb-4 text-sm text-gray-500"><p>Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p></div>
-            <div className="relative flex justify-center space-x-3">
-                <span className="absolute inset-y-1 left-12 flex items-center pl-2">
-                </span>
-                <input className="w-[570px] rounded-lg p-2 hover:outline-blue-400" type="email" placeholder="Your email address" />
-                <button className="w-32 rounded-lg border bg-blue-700 font-medium text-white hover:bg-blue-800">Subscribe</button>
-            </div>
-            <div>
-                <p className="mx-11 mt-2 text-[15px] font-thin">By subscribing, you agree with Revue’s <a className="text-blue-700" href="https://www.getrevue.co/terms" target="_blank">Terms of Service</a> and <a className="text-blue-700" href="https://www.getrevue.co/privacy" target="_blank">Privacy Policy.</a></p>
-            </div>
+       <section className="bg-white py-16 px-4 sm:px-6 lg:px-12">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#000080] mb-8">
+          Why Choose Us?
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          At LegalConnect, we go beyond connecting you to lawyers — we bring you peace of mind. Our platform is built on trust, transparency, and top-notch legal expertise from across the country. Whether it's a minor query or a major legal battle, we’re here to ensure your journey is guided by verified professionals who care.
+        </p>
+
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Our network features highly experienced and verified lawyers who have successfully handled thousands of consultations in diverse fields — from family law, property disputes, corporate matters, to criminal litigation. Each professional on our platform is vetted for qualifications, credibility, and client satisfaction.
+        </p>
+
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Legal matters often come with stress and urgency. That’s why our platform offers instant support through chat, call, and even live video consultations. Wherever you are, help is just a click away. No long queues, no hidden fees — just clarity, comfort, and confidence.
+        </p>
+
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          What makes LegalConnect different is our customer-first approach. We understand the importance of discretion, and your privacy is our top priority. All consultations are 100% confidential, secure, and designed to make your experience smooth and stress-free.
+        </p>
+
+        <div className="mt-10">
+          <span className="inline-block bg-[#000080]/10 text-[#000080] px-5 py-2 rounded-full text-sm font-semibold">
+            Verified Experts · Instant Support · Nationwide Network
+          </span>
         </div>
+      </div>
+    </section>
     )
 }
 

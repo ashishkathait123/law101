@@ -27,80 +27,56 @@ const HomeHero = () => {
     }
   };
 
-  // Define color schemes for each option
   const optionStyles = {
     chat: {
       bgFrom: "from-pink-500",
       bgTo: "to-pink-600",
       hoverBg: "rgba(236, 72, 153, 0.1)",
       textColor: "text-pink-600",
-      iconColor: "text-pink-500"
+      iconColor: "text-pink-500",
     },
     call: {
       bgFrom: "from-green-500",
       bgTo: "to-green-600",
       hoverBg: "rgba(16, 185, 129, 0.1)",
       textColor: "text-green-600",
-      iconColor: "text-green-500"
+      iconColor: "text-green-500",
     },
     document: {
-      bgFrom: "from-orange-500",
-      bgTo: "to-orange-600",
+      bgFrom: "from-orange-300",
+      bgTo: "to-orange-400",
       hoverBg: "rgba(249, 115, 22, 0.1)",
       textColor: "text-orange-600",
-      iconColor: "text-orange-500"
+      iconColor: "text-orange-500",
     },
     appointment: {
       bgFrom: "from-gray-700",
       bgTo: "to-gray-900",
       hoverBg: "rgba(0, 0, 0, 0.1)",
       textColor: "text-gray-700",
-      iconColor: "text-gray-500"
-    }
+      iconColor: "text-gray-500",
+    },
   };
 
   const options = [
     { text: "Chat with Lawyer", icon: "💬", action: "chat" },
     { text: "Talk to Lawyer", icon: "📞", action: "call" },
-  { text: "Legal Documentary", icon: "📚", action: "document" }, 
+    { text: "Legal Documentary", icon: "📚", action: "document" },
     { text: "Allotment of Lawyer", icon: "📅", action: "appointment" },
   ];
 
   return (
-    <section
-      className="w-full py-20 bg-cover bg-center bg-no-repeat relative mt-11"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-20 relative bg-gradient-to-b from-[#0a1f44] to-white mt-11">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="p-8 md:p-12 rounded-xl shadow-lg max-w-6xl mx-auto text-center backdrop-blur-md bg-cover bg-center bg-no-repeat relative overflow-hidden"
+          className="p-8 md:p-12 rounded-xl shadow-lg max-w-6xl mx-auto text-center bg-white bg-opacity-80 backdrop-blur-md"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
-          }}
         >
-          <motion.h3
-            className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-            200+ Professionals Recommend LegalConnect
-          </motion.h3>
-
           <motion.p
-            className="text-xl text-gray-600 dark:text-gray-300 mb-10"
+            className="text-xl text-gray-700 mb-10 font-medium"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -117,7 +93,7 @@ const HomeHero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <motion.button
-              className="bg-gradient-to-r from-[rgb(40,62,81)] to-[rgb(72,85,99)] text-white px-12 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-[#0a1f44] to-[#1e3a8a] text-white px-12 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)",
@@ -141,20 +117,18 @@ const HomeHero = () => {
               return (
                 <motion.button
                   key={index}
-                  className={`bg-gradient-to-r ${style.bgFrom} ${style.bgTo} text-white hover:bg-opacity-10 border border-transparent rounded-xl p-5 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50`}
+                  className={`bg-gradient-to-r ${style.bgFrom} ${style.bgTo} text-white rounded-xl p-5 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-blue-500`}
                   whileHover={{
                     y: -5,
-                    backgroundColor: style.hoverBg,
-                    color: style.textColor
                   }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => handleOptionClick(item.action)}
                 >
                   <div className="flex flex-col items-center">
-                    <span className={`text-3xl mb-3 ${style.iconColor} transition-colors`}>
+                    <span className={`text-3xl mb-3 ${style.iconColor}`}>
                       {item.icon}
                     </span>
-                    <p className="font-medium text-white group-hover:text-current transition-colors text-lg">
+                    <p className="font-medium text-white group-hover:text-current text-lg">
                       {item.text}
                     </p>
                   </div>

@@ -72,11 +72,11 @@ const ProfilePage = () => {
                     {lawyer.specialization || "Legal Practitioner"}
                   </p>
                 </div>
-                <div className="mt-3 md:mt-0">
+                {/* <div className="mt-3 md:mt-0">
                   <button className="bg-white text-blue-800 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
                     Follow
                   </button>
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">

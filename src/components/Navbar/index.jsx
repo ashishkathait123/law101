@@ -127,7 +127,7 @@ const Navbar = () => {
                   "_blank"
                 )
               }
-              className="bg-gradient-to-r from-[rgb(40,62,81)] to-[rgb(72,85,99)] text-white px-4 lg:px-6 py-2 rounded-lg font-medium shadow-lg hover:shadow-blue-200 transition-all"
+              className="bg-gradient-to-r from-[rgb(57,42,190)] to-[rgb(80,132,187)] text-white px-4 lg:px-6 py-2 rounded-lg font-medium shadow-lg hover:shadow-blue-200 transition-all"
             >
               Register/Login Now
             </motion.button>
