@@ -9,9 +9,9 @@ import { Admin, BenefitsCard, Feedbacks, Footer, HomeHero, LawFirms, LawyerPortf
 import "./App.css";
 import Root from "./Root";
 import { GetUpdates } from "./components/elements";
-import Docter from "./components/Docter/docter";
-import ProfilePage from "./components/Docter/ProfilePage";
-import DocumentaryLawyer from "./components/Docter/DocumentaryLawyer";
+import Docter from "./components/Lawyer/docter";
+import ProfilePage from "./components/Lawyer/ProfilePage";
+import DocumentaryLawyer from "./components/Lawyer/DocumentaryLawyer";
 import AboutUs from "./components/elements/AboutUs";
 function App() {
   const router = createBrowserRouter(
