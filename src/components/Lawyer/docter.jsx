@@ -58,17 +58,22 @@ const LawyerCard = () => {
     navigate('/profile', { state: { lawyer } });
   };
 
-  const handleContactClick = (lawyer) => {
-    const status = lawyer.status?.toLowerCase();
-    if (status === 'offline' || !status) {
-      alert('This lawyer is currently offline. Please try again later.');
-      return;
-    }
-    window.open(
-      'https://law-consultancy-firms-git-low3-ashish8.vercel.app/',
-      '_blank'
-    );
-  };
+const handleContactClick = (lawyer) => {
+  const status = lawyer.status?.toLowerCase();
+  if (status === 'offline' || !status) {
+    alert('This lawyer is currently offline. Please try again later.');
+    return;
+  }
+
+  const lawyerId = lawyer._id;
+  const service = 'chat'; // 'call' or 'video' as needed
+  const dashboardURL = `https://law-consultancy-firms-git-low3-ashish8.vercel.app/user/FindLawyer?lawyerId=${lawyerId}&service=${service}`;
+
+  window.open(dashboardURL, '_blank');
+};
+
+
+
 
   const getStatusStyles = (status) => {
     switch (status?.toLowerCase()) {
