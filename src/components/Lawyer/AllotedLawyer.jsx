@@ -211,13 +211,13 @@ const validLawyers = lawyersData; // or a smarter filter if needed
                     <span className={`text-xs px-2 py-1 rounded-full ${statusStyles.textColor} ${statusStyles.bgColor}`}>
                       {statusStyles.label}
                     </span>
-                    <button
+                    {/* <button
                       onClick={() => handleContactClick(lawyer)}
                       disabled={lawyer.status?.toLowerCase() === 'offline'}
                       className={`mt-2 text-sm px-3 py-1.5 rounded-md ${statusStyles.buttonClass}`}
                     >
                       {interactionMode === "call" ? "Call Now" : "Chat Now"}
-                    </button>
+                    </button> */}
                     <span className="text-xs text-gray-400 mt-1">
                       {statusStyles.waitTime}
                     </span>
