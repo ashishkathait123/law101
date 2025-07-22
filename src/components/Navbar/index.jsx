@@ -34,7 +34,7 @@ const Navbar = () => {
     // { id: "testimonials", label: "Testimonials", route: "/" },
     { id: "chat", label: "Chat With Lawyer", route: "/chat" },
     { id: "document", label: "Documentary Lawyers", route: "/document" },
-    { id: "allotment", label: "Alloted Lawyers", route: "/allotment" },
+    { id: "allotment", label: "Hire A Lawyers", route: "/hire-lawyer" },
   ];
 
   const mobileMenuVariants = {

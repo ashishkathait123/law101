@@ -266,7 +266,7 @@ const ProfilePage = () => {
 
 
             {/* Ratings */}
-            <div className="border border-gray-200 rounded-lg p-6 shadow-sm">
+            {/* <div className="border border-gray-200 rounded-lg p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-800 mb-4">
                 Client Ratings
               </h3>
@@ -293,7 +293,7 @@ const ProfilePage = () => {
               <button className="w-full bg-blue-50 text-blue-800 py-2 rounded-md font-medium hover:bg-blue-100 transition-colors">
                 View All Reviews
               </button>
-            </div>
+            </div> */}
 
             {/* Location */}
             {/* <div className="border border-gray-200 rounded-lg p-6 shadow-sm">

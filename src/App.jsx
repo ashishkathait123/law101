@@ -33,7 +33,7 @@ function App() {
          <Route path="/profile" element={<ProfilePage />} />
          <Route path="/document" element={<DocumentaryLawyer />} />
          <Route path="/about" element={<AboutUs />} />
-         <Route path="/allotment" element={<AllotLawyerCard />} />
+         <Route path="/hire-lawyer" element={<AllotLawyerCard />} />
       </Route>
     )
   );

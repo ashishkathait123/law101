@@ -971,7 +971,7 @@ function Feedbacks() {
  <section className="bg-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#000080] mb-6">
-          Best Verified Lawyers Across India
+          Verified Lawyers Across India
         </h2>
         <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
           When it comes to legal consultation, we understand the importance of trust,
