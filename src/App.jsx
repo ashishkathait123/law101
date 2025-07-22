@@ -13,6 +13,7 @@ import Docter from "./components/Lawyer/docter";
 import ProfilePage from "./components/Lawyer/ProfilePage";
 import DocumentaryLawyer from "./components/Lawyer/DocumentaryLawyer";
 import AboutUs from "./components/elements/AboutUs";
+import AllotLawyerCard from "./components/Lawyer/AllotedLawyer";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -32,6 +33,7 @@ function App() {
          <Route path="/profile" element={<ProfilePage />} />
          <Route path="/document" element={<DocumentaryLawyer />} />
          <Route path="/about" element={<AboutUs />} />
+         <Route path="/allotment" element={<AllotLawyerCard />} />
       </Route>
     )
   );
