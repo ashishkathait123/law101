@@ -28,14 +28,14 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: "home", label: "Home", route: "/" },
-    // { id: "features", label: "Features", route: "/" },
-    { id: "about", label: "About Us", route: "/about" },
-    // { id: "testimonials", label: "Testimonials", route: "/" },
-    { id: "chat", label: "Chat With Lawyer", route: "/chat" },
-    { id: "document", label: "Documentary Lawyers", route: "/document" },
-    { id: "allotment", label: "Hire A Lawyers", route: "/hire-lawyer" },
-  ];
+  { id: "home", label: "Home" },
+  { id: "about", label: "About Us" },
+  { id: "chat", label: "Chat With Lawyer" },
+  { id: "call", label: "Call With Lawyer" },
+  { id: "document", label: "Documentary Lawyers" },
+  { id: "allotment", label: "Hire A Lawyer" },
+  { id: "appointment", label: "Book Appointment" },
+];
 
   const mobileMenuVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -53,6 +53,39 @@ const Navbar = () => {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0 },
   };
+
+const handleNavItemClick = (id) => {
+  switch (id) {
+    case "chat":
+      navigate("/chat", { state: { mode: "chat" } });
+      break;
+    case "call":
+      navigate("/chat", { state: { mode: "call" } });
+      break;
+    case "document":
+      navigate("/document");
+      break;
+    case "allotment":
+      navigate("/hire-lawyer");
+      break;
+    case "appointment":
+      window.open(
+        "https://law-consultancy-firms-git-low3-ashish8.vercel.app/",
+        "_blank"
+      );
+      break;
+    case "about":
+      navigate("/about");
+      break;
+    case "home":
+      navigate("/");
+      break;
+    default:
+      console.warn("Unknown navigation item:", id);
+  }
+  setIsMobileMenuOpen(false);
+};
+
 
   return (
     <motion.div
@@ -82,7 +115,7 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
+          <div className="hidden md:flex items-center space-x-6 l:space-x-8">
             {navItems.map((item) => (
               <div
                 key={item.id}
@@ -91,13 +124,8 @@ const Navbar = () => {
                 onMouseLeave={() => setIsHovering(null)}
               >
                 <button
-                  onClick={() => {
-                    if (item.route) {
-                      navigate(item.route);
-                    } else {
-                      scrollToSection(item.target);
-                    }
-                  }}
+                  onClick={() => handleNavItemClick(item.id)}
+
                   className="text-sm md:text-base text-gray-700 hover:text-blue-600 transition-colors duration-300 px-2 md:px-3 py-1 font-medium"
                 >
                   {item.label}
@@ -171,14 +199,8 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <button
-                      onClick={() => {
-                        if (item.route) {
-                          navigate(item.route);
-                        } else {
-                          scrollToSection(item.target);
-                        }
-                        setIsMobileMenuOpen(false);
-                      }}
+                     onClick={() => handleNavItemClick(item.id)}
+
                       className="w-full text-left text-sm px-4 py-3 rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
                     >
                       {item.label}
