@@ -66,7 +66,7 @@ const HomeHero = () => {
   ];
 
   return (
-    <section className="w-full py-20 relative bg-gradient-to-b from-[#0a1f44] to-white mt-11">
+    <section className="w-full py-20 relative bg-gradient-to-b from-[#0a1f44] to-white mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="p-8 md:p-12 rounded-xl shadow-lg max-w-6xl mx-auto text-center bg-white bg-opacity-80 backdrop-blur-md"

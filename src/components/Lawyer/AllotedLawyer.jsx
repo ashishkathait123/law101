@@ -116,7 +116,7 @@ const validLawyers = lawyersData; // or a smarter filter if needed
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mt-12">
       <h2 className="text-3xl font-bold text-center text-[#000080] mb-6">
         Our Lawyers
       </h2>

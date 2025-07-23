@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <a href="#">Products</a>
               <a href="/about">About Us</a>
-              <a href="#">Consultations</a>
+              <a href="/refund">Refund & Cancellation</a>
               <a href="#">Support</a>
             </div>
           </div>
@@ -20,7 +20,7 @@ const Footer = () => {
             <p className="font-semibold mb-4">Resources</p>
             <div className="flex flex-col gap-2">
               <a href="https://grandeurnet.com/">Terms & Conditions (Powered by GrandeurNet)</a>
-              <a href="#">Privacy Policy</a>
+              <a href="/privacy">Privacy Policy</a>
             </div>
           </div>
 
@@ -39,7 +39,7 @@ const Footer = () => {
         {/* Logo and Payment */}
         <div className="text-center lg:text-left">
           <img
-            src="/images/footer-logo.png"
+            src="/images/footer.jpg"
             className="w-28 m-auto lg:ml-0 rounded-md"
             alt="Logo"
           />

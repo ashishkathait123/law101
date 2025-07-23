@@ -5,8 +5,12 @@ const GetUpdates = () => {
        <section className="bg-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#000080] mb-8">
-          Why Choose Us?
+          Why Choose Lawyers10 on 10?
         </h2>
+        <p  className="text-lg text-gray-900 leading-relaxed mb-6"> <b>Lawyers10 on 10 connects you with the best verified lawyers across India in seconds.
+Tap. Talk Instantly Online.</b>
+
+</p>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           At LegalConnect, we go beyond connecting you to lawyers — we bring you peace of mind. Our platform is built on trust, transparency, and top-notch legal expertise from across the country. Whether it's a minor query or a major legal battle, we’re here to ensure your journey is guided by verified professionals who care.
         </p>

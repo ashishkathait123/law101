@@ -99,19 +99,21 @@ const handleNavItemClick = (id) => {
       }}
     >
       <nav className="max-w-7xl mx-auto overflow-x-hidden">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-18 ">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+         
+            whileHover={{ scale: 1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/")}
             className="cursor-pointer"
           >
-            <img
-              src="/images/dark-logo.png"
-              className="w-36 sm:w-40 md:w-48"
-              alt="Logo"
-            />
+           <img
+  src="/images/dark-logo.png"
+  className="w-36 sm:w-30 md:w-48 h-18 object-contain"
+  alt="Logo"
+/>
+
           </motion.div>
 
           {/* Desktop Navigation */}
