@@ -17,6 +17,9 @@ import AllotLawyerCard from "./components/Lawyer/AllotedLawyer";
 import RefundCancellation from "./components/refund/RefundCancellation";
 import Privacy from "./components/refund/privacy";
 import Use10on10 from "./components/Feedbacks/hero1";
+import TrustScoreSection from "./components/BenefitsCard/TrustScoreSection";
+import LawyerCarousel from "./components/Lawyer/LawyerCarousel";
+import TermsAndConditions from "./components/refund/TermsAndConditions";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -39,6 +42,7 @@ function App() {
          <Route path="/hire-lawyer" element={<AllotLawyerCard />} />
          <Route path="/refund" element={<RefundCancellation />} />
          <Route path="/privacy" element={<Privacy />} />
+         <Route path="/terms-condition" element={<TermsAndConditions />} />
       </Route>
     )
   );
@@ -48,13 +52,16 @@ const Homepage = () => {
   return (<>
   
     <HomeHero />
-<Use10on10/>
+    <LawyerCarousel />
+      <Feedbacks />
     {/* <BenefitsCard /> */}
-    <Docter/>
-    {/* <LawFirms /> */}
+    {/* <Docter/> */}
+   {/* <LawFirms /> */}
     {/* <Testimonails /> */}
+   <TrustScoreSection/>
    
-    <Feedbacks />
+<Use10on10/>
+   
      <GetUpdates />
   </>
   )

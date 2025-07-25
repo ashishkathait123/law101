@@ -3,68 +3,90 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="bg-white">
-      {/* Top Footer Section */}
-      <div className="justify-between bg-[#1c1c84] flex flex-col text-center lg:text-left md:flex-row lg:mx-32 py-6 rounded-md text-white">
-        <div className="font-normal py-2 text-sm justify-around flex flex-col lg:flex-row w-full">
-          <div className="mb-6 lg:mb-0 lg:mr-16">
-            <p className="font-semibold mb-4">Company</p>
-            <div className="flex flex-col gap-2">
-              <a href="#">Products</a>
-              <a href="/about">About Us</a>
-              <a href="/refund">Refund & Cancellation</a>
-              <a href="#">Support</a>
-            </div>
-          </div>
-
-          <div className="mb-6 lg:mb-0 lg:mr-16">
-            <p className="font-semibold mb-4">Resources</p>
-            <div className="flex flex-col gap-2">
-              <a href="https://grandeurnet.com/">Terms & Conditions (Powered by GrandeurNet)</a>
-              <a href="/privacy">Privacy Policy</a>
-            </div>
-          </div>
-
-          <div className="mb-6 lg:mb-0 lg:mr-16">
-            <p className="font-semibold mb-4">Our Details</p>
-            <div className="flex flex-col gap-2">
-              <p>
-                Bangali Kothi <br />
-                Dehradun, 248001 <br />
-              </p>
-              <a href="mailto:temp@gmail.com">temp@gmail.com</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Logo and Payment */}
-        <div className="text-center lg:text-left">
-          <img
-            src="/images/footer.jpg"
-            className="w-28 m-auto lg:ml-0 rounded-md"
-            alt="Logo"
-          />
-          <div className="py-6 text-sm font-light">
-            Copyright © 2025 All Rights Reserved<br />
-            Powered By GrandeurNet.
-          </div>
-          <img
-            src="/images/footer-banks.png"
-            className="w-48 m-auto lg:ml-0"
-            alt="Supported Banks"
-          />
-        </div>
-      </div>
-
-      {/* About Section */}
-      <div className="max-w-6xl mx-auto text-center px-4 py-8 text-[#000080]">
-        <h4 className="text-xl font-bold mb-2">About LegalConnect</h4>
-        <p className="text-sm text-gray-700 leading-relaxed ">
-          LegalConnect is India’s trusted online platform for verified legal consultations.
+       {/* Optional About Section (commented out) */}
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-[#000080]">
+        <h4 className="text-xl font-bold mb-4 text-center">About LegalConnect</h4>
+        <p className="text-sm text-gray-700 leading-relaxed text-center">
+          LegalConnect is India's trusted online platform for verified legal consultations.
           Instantly connect with top-rated lawyers via chat or call, and get solutions to all your legal concerns.
           Whether it's criminal law, family issues, property disputes, or startup consultation—LegalConnect ensures reliable
           legal advice from the comfort of your home. Available 24/7 for every Indian in need of justice.
         </p>
       </div>
+      {/* Top Footer Section */}
+      <div className="bg-[#1c1c84] w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-12 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between gap-8">
+            {/* Company Links */}
+            <div className="flex-1 min-w-[200px]">
+              <h3 className="text-lg font-semibold mb-4">Company</h3>
+              <ul className="space-y-3">
+                {/* <li><a href="#" className="hover:underline">T</a></li> */}
+                <li><a href="/about" className="hover:underline">About Us</a></li>
+                <li><a href="/refund" className="hover:underline">Refund & Cancellation</a></li>
+                <li><a href="#" className="hover:underline">Support</a></li>
+              </ul>
+            </div>
+
+            {/* Important Links Links */}
+            <div className="flex-1 min-w-[200px]">
+              <h3 className="text-lg font-semibold mb-4">Important Links</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/terms-condition" className="hover:underline">
+                    Terms & Conditions 
+                  </a>
+                </li>
+                <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
+                <li><a href="/chat" className="hover:underline">Chat with lawyer</a></li>
+                <li><a href="/https://law-consultancy-firms-git-low3-ashish8.vercel.app" className="hover:underline">Schedule Your Consultation</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Details */}
+            <div className="flex-1 min-w-[200px]">
+              <h3 className="text-lg font-semibold mb-4">Our Details</h3>
+              <address className="not-italic space-y-3">
+                <p>
+                  Bangali Kothi<br />
+                  Dehradun, 248001
+                </p>
+                <a href="mailto:temp@gmail.com" className="hover:underline">temp@gmail.com</a><br />
+<a href="tel:+919876543210" className="hover:underline">
+  +91 9876543210
+</a>              </address>
+            </div>
+
+            {/* Logo and Payment */}
+            <div className="flex-1 min-w-[200px] flex flex-col items-center md:items-end">
+              <div className="w-full max-w-[200px]">
+                <img
+                  src="/images/footer.jpg"
+                  className="w-28 rounded-md mb-6 mx-auto md:mx-0 md:ml-auto"
+                  alt="Logo"
+                  loading="lazy"
+                />
+                
+                <div className="text-sm font-light mb-6 text-center md:text-right">
+                  Copyright © 2025 All Rights Reserved<br />
+                  Powered By GrandeurNet.
+                </div>
+                
+                {/* <img
+                  src="/images/footer-banks.png"
+                  className="w-48 mx-auto md:mx-0 md:ml-auto"
+                  alt="Supported Banks"
+                  loading="lazy"
+                /> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+     
     </div>
   );
 };
