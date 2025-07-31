@@ -108,9 +108,7 @@ const LawyerCarousel = () => {
   };
 
   return (
-    <div className="py-10 bg-gray-50 relative">
-     
-
+    <div className="py-12 bg-gradient-to-b from-gray-50 to-white relative">
       {/* Hide scrollbars */}
       <style>{`
         .scrollbar-hide::-webkit-scrollbar {
@@ -122,20 +120,40 @@ const LawyerCarousel = () => {
         }
       `}</style>
 
-      <h2 className="text-3xl font-bold text-center text-[#000080] mb-8">
-        Meet Our Verified Lawyers
-      </h2>
- {/* Search and filter */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-6 px-4 md:px-12">
+      {/* Attractive Heading Section */}
+      <div className="text-center mb-10 px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-[#000080] mb-4"
+        >
+          <span className="relative inline-block">
+            <span className="relative z-10">Meet Our Elite Verified Legal Experts</span>
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300/60 z-0 transform -rotate-1"></span>
+          </span>
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-lg text-gray-600 max-w-2xl mx-auto"
+        >
+          Connect with experienced, verified lawyers ready to assist you with your legal needs
+        </motion.p>
+      </div>
+
+      {/* Search and filter */}
+      <div className="flex flex-col sm:flex-row gap-4 mb-8 px-4 md:px-12 max-w-5xl mx-auto">
         <input
           type="text"
           placeholder="Search by name, specialization, or city..."
-          className="w-full sm:w-1/2 px-4 py-2 border border-[#000080]/30 rounded-md focus:outline-none focus:ring-2 focus:ring-[#000080]"
+          className="w-full sm:w-1/2 px-4 py-3 border border-[#000080]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#000080] shadow-sm"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <select
-          className="w-full sm:w-1/3 px-4 py-2 border border-[#000080]/30 rounded-md focus:outline-none focus:ring-2 focus:ring-[#000080] text-[#000080]"
+          className="w-full sm:w-1/3 px-4 py-3 border border-[#000080]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#000080] text-[#000080] shadow-sm"
           value={selectedSpecialization}
           onChange={(e) => setSelectedSpecialization(e.target.value)}
         >
@@ -145,14 +163,17 @@ const LawyerCarousel = () => {
           ))}
         </select>
       </div>
+
       {/* Carousel */}
-      <div className="relative">
+      <div className="relative max-w-7xl mx-auto">
         <button 
           onClick={scrollLeft}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#000080] rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:scale-110 transition-all"
+          className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-100 text-[#000080] rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-all border border-gray-200"
           aria-label="Scroll left"
         >
-          &lt;
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
         </button>
 
         <div
@@ -176,7 +197,7 @@ const LawyerCarousel = () => {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="min-w-[250px] bg-white border border-[#000080]/20 rounded-xl shadow-md p-4 cursor-pointer transition-all"
+                className="min-w-[280px] bg-white border border-[#000080]/20 rounded-xl shadow-lg p-6 cursor-pointer transition-all hover:shadow-xl"
                 onClick={() => viewProfile(lawyer)}
               >
                 <div className="flex flex-col items-center">
@@ -184,12 +205,12 @@ const LawyerCarousel = () => {
                     <motion.img
                       src={`${API_BASE_URL}${lawyer.lawyerImage}`}
                       alt={lawyer.name}
-                      className="w-20 h-20 rounded-full border-2 border-[#000080] object-cover mb-2"
+                      className="w-24 h-24 rounded-full border-3 border-[#000080] object-cover mb-4 shadow-md"
                       whileHover={{ rotate: 5 }}
                     />
                   ) : (
                     <motion.div
-                      className="w-20 h-20 rounded-full bg-[#000080]/10 text-[#000080] flex items-center justify-center font-bold text-xl mb-2"
+                      className="w-24 h-24 rounded-full bg-gradient-to-br from-[#000080]/10 to-[#000080]/30 text-[#000080] flex items-center justify-center font-bold text-2xl mb-4 shadow-md"
                       whileHover={{ rotate: 5 }}
                     >
                       {(lawyer.name || 'NA')
@@ -199,11 +220,22 @@ const LawyerCarousel = () => {
                         .slice(0, 2)}
                     </motion.div>
                   )}
-                  <h3 className="text-lg font-semibold text-[#000080] text-center">{lawyer.name}</h3>
-                  <p className="text-sm text-gray-600 text-center mt-1">{lawyer.specialization}</p>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {lawyer.experience}+ yrs • ₹{lawyer.consultation_fees || "Free"}
+                  <h3 className="text-xl font-bold text-[#000080] text-center">{lawyer.name}</h3>
+                  <p className="text-sm text-gray-600 text-center mt-2 bg-[#000080]/10 px-3 py-1 rounded-full">
+                    {lawyer.specialization}
                   </p>
+                  <div className="flex items-center mt-3 text-sm text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    {lawyer.experience}+ years
+                  </div>
+                  <div className="flex items-center mt-1 text-sm text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    ₹{lawyer.consultation_fees || "Free"} consultation
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -212,21 +244,39 @@ const LawyerCarousel = () => {
 
         <button 
           onClick={scrollRight}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#000080] rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:scale-110 transition-all"
+          className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-100 text-[#000080] rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-all border border-gray-200"
           aria-label="Scroll right"
         >
-          &gt;
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </button>
       </div>
 
       {/* Auto-scroll toggle */}
-      <div className="flex justify-center mt-4">
-        <button
+      <div className="flex justify-center mt-8">
+        <motion.button
           onClick={() => setIsAutoScrolling(!isAutoScrolling)}
-          className="px-4 py-2 bg-[#000080] text-white rounded-md hover:bg-[#000080]/90 transition-colors"
+          className="px-6 py-3 bg-gradient-to-r from-[#000080] to-blue-700 text-white rounded-lg hover:from-[#000080]/90 hover:to-blue-700/90 transition-all shadow-md flex items-center"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          {isAutoScrolling ? 'Pause Auto-scroll' : 'Start Auto-scroll'}
-        </button>
+          {isAutoScrolling ? (
+            <>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              Pause Auto-scroll
+            </>
+          ) : (
+            <>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+              </svg>
+              Start Auto-scroll
+            </>
+          )}
+        </motion.button>
       </div>
     </div>
   );

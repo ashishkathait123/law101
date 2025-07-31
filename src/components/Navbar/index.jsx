@@ -34,7 +34,7 @@ const Navbar = () => {
     { id: "call", label: "Call With Lawyer" },
     { id: "document", label: "Documentary Lawyers" },
     { id: "allotment", label: "Hire A Lawyer" },
-    { id: "appointment", label: "Book Appointment" },
+    // { id: "appointment", label: "Book Appointment" },
   ];
 
   const mobileMenuVariants = {

@@ -62,11 +62,11 @@ const HomeHero = () => {
     { text: "Chat with Lawyer", icon: "💬", action: "chat" },
     { text: "Talk to Lawyer", icon: "📞", action: "call" },
     { text: "Legal Documentary", icon: "📚", action: "document" },
-    { text: "Allotment of Lawyer", icon: "📅", action: "appointment" },
+    { text: "Hire a lawyer", icon: "📅", action: "appointment" },
   ];
 
   return (
-    <section className="w-full py-20 relative bg-gradient-to-b from-[#0a1f44] to-white mt-16">
+    <section className="w-full py-20 relative bg-gradient-to-b from-[#0a1f44] to-white mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="p-8 md:p-12 rounded-xl shadow-lg max-w-6xl mx-auto text-center bg-white bg-opacity-80 backdrop-blur-md"
