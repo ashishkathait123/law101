@@ -129,7 +129,7 @@ const LawyerCarousel = () => {
           className="text-4xl md:text-5xl font-bold text-[#000080] mb-4"
         >
           <span className="relative inline-block">
-            <span className="relative z-10">Meet Our Elite Verified Legal Experts</span>
+            <span className="relative z-10">Talk To a BCI Vrified Legal Experts</span>
             <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300/60 z-0 transform -rotate-1"></span>
           </span>
         </motion.h2>

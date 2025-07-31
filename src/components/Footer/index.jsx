@@ -25,7 +25,7 @@ const Footer = () => {
                 {/* <li><a href="#" className="hover:underline">T</a></li> */}
                 <li><a href="/about" className="hover:underline">About Us</a></li>
                 <li><a href="/refund" className="hover:underline">Refund & Cancellation</a></li>
-                <li><a href="#" className="hover:underline">Support</a></li>
+                <li><a href="tel:+919389115137" className="hover:underline">Support</a></li>
               </ul>
             </div>
 

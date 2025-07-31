@@ -11,6 +11,8 @@ const RefundCancellation = () => {
 
       <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Refund Eligibility</h2>
       <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <li>100 percent refund if call is not connected and cancelation can be done before  call gets connected.
+.</li>
         <li>If a lawyer fails to attend the scheduled session.</li>
         <li>If there is a technical issue on our end that prevents the consultation.</li>
         <li>Requests made within 24 hours of the missed session.</li>

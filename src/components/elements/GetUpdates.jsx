@@ -138,7 +138,7 @@ const navigate = useNavigate();
                             <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
                                 <FaClock size={24} />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900">Instant Legal Support</h3>
+                            <h3 className="text-xl font-bold text-gray-900">Legal Documentary Support</h3>
                         </div>
                         <p className="text-gray-700 mb-6">
                             Connect with lawyers in under 15 minutes through multiple channels.
@@ -153,36 +153,27 @@ const navigate = useNavigate();
                     </motion.div>
 
                     <motion.div 
-                        className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all"
-                        whileHover={{ y: -5 }}
-                        variants={fadeIn}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4, duration: 0.6 }}
-                    >
-                        <div className="flex items-center mb-6">
-                            <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
-                                <FaHandshake size={24} />
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900">Transparent Pricing</h3>
-                        </div>
-                        <p className="text-gray-700 mb-6">
-                            Know exactly what you'll pay before you begin.
-                        </p>
-                        <div className="space-y-4">
-                            {[
-                                { service: 'Basic Consultation', price: '₹499' },
-                                { service: 'Document Review', price: '₹999' },
-                                { service: 'Hourly Rate (Average)', price: '₹1,500-3,000' }
-                            ].map((item, i) => (
-                                <div key={i} className="flex justify-between items-center">
-                                    <span className="text-gray-700">{item.service}</span>
-                                    <span className="font-bold text-blue-600">{item.price}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
+    className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all"
+    whileHover={{ y: -5 }}
+    variants={fadeIn}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    transition={{ delay: 0.4, duration: 0.6 }}
+>
+    <div className="flex items-center mb-6">
+        <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
+            <FaHandshake size={24} />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900">Trusted Law Firms</h3>
+    </div>
+    <p className="text-gray-700">
+    Connect with verified, experienced law firms committed to client success and ethical practice.  
+    Each firm on our platform is thoroughly vetted to ensure quality service, professionalism, and legal expertise.  
+    Whether you need help with civil matters, corporate issues, or personal legal advice.
+</p>
+</motion.div>
+
 
                     <motion.div 
                         className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all"
@@ -259,7 +250,7 @@ const navigate = useNavigate();
                                   onClick={() => window.location.href = "https://law-consultancy-firms-git-low3-ashish8.vercel.app/"}
 
                             >
-                                Schedule Consultation
+                                Talk To Lawyer
                             </motion.button>
                         </div>
                     </div>
@@ -295,7 +286,7 @@ const navigate = useNavigate();
                         ))}
                     </div>
                     <p className="text-gray-700 max-w-3xl mx-auto text-center text-lg">
-                        From routine legal matters to complex litigation, our network of 1,500+ specialized attorneys covers every aspect of Indian law.
+                        From routine legal matters to complex litigation, our network of 40+ specialized attorneys covers every aspect of Indian law.
                     </p>
                 </motion.div>
 

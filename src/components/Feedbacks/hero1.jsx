@@ -22,7 +22,7 @@ const Use10on10 = () => {
 
       {/* How to Use Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">How to Use Lawyers10on10</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Find & Hire Lawyers on Lawyers10on10</h2>
         <div className="grid md:grid-cols-5 gap-8 text-center">
           {[
             {

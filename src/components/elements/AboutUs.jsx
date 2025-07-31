@@ -5,11 +5,12 @@ import team1 from "/images/item1.jpg";
 import team2 from "/images/item.jpg";
 import team3 from "/images/item2.jpg";
 import team from "/images/item.jpg";
-import founder from "/images/item1.jpg"; // Add your founder's image
+import founder from "/images/item1.jpg";
 
 const AboutUs = () => {
   return (
     <div className="bg-gray-50 mt-20">
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -36,7 +37,6 @@ const AboutUs = () => {
               "I founded this firm with a simple belief: legal counsel should empower clients, not intimidate them. 
               After 25 years in practice, I've seen how the right guidance can transform businesses and lives."
             </p>
-            
             <div className="space-y-4 mt-6">
               <div className="flex items-start">
                 <FaGraduationCap className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
@@ -46,7 +46,6 @@ const AboutUs = () => {
                   <p className="text-gray-600">Bachelor of Arts in Political Science, Yale University (1992)</p>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <FaBriefcase className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
                 <div>
@@ -54,12 +53,11 @@ const AboutUs = () => {
                   <ul className="list-disc list-inside text-gray-600 space-y-1">
                     <li>Partner at Harrison & Associates (1998-2005)</li>
                     <li>Admitted to the U.S. Supreme Court Bar (2001)</li>
-                    <li>Recipient of the American Bar Association's Pro Bono Publico Award (2003)</li>
+                    <li>Recipient of the ABA's Pro Bono Publico Award (2003)</li>
                     <li>Founded Harrison Legal Group (2005)</li>
                   </ul>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <FaHandshake className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
                 <div>
@@ -101,59 +99,46 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-{/* Lawyers10on10 Detailed About Us Section */}
-<div className="bg-white py-16">
-  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-3xl font-bold text-gray-900 mb-6">About Lawyers10on10</h2>
-    <p className="text-lg text-gray-700 leading-relaxed">
-      Lawyers10on10 is the best website for online legal consultations. It has a team of top verified lawyers, including court experts, from across India. You can connect with a lawyer through call or chat and get accurate answers to all your legal queries—instantly and securely.
-    </p>
-  </div>
-</div>
 
-      {/* Our Values */}
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Core Values</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <FaBalanceScale className="text-4xl mb-4 text-blue-600" />,
-                title: "Integrity",
-                desc: "We uphold the highest ethical standards in all our dealings."
-              },
-              {
-                icon: <FaHandshake className="text-4xl mb-4 text-blue-600" />,
-                title: "Client Commitment",
-                desc: "Your success is our priority. We listen first, then advise."
-              },
-              {
-                icon: <GiScaleMail className="text-4xl mb-4 text-blue-600" />,
-                title: "Excellence",
-                desc: "We combine deep expertise with meticulous attention to detail."
-              },
-              {
-                icon: <FaUsers className="text-4xl mb-4 text-blue-600" />,
-                title: "Collaboration",
-                desc: "We work as partners with our clients for optimal outcomes."
-              },
-              {
-                icon: <FaChartLine className="text-4xl mb-4 text-blue-600" />,
-                title: "Innovation",
-                desc: "We embrace modern solutions while respecting legal traditions."
-              },
-              {
-                icon: <FaAward className="text-4xl mb-4 text-blue-600" />,
-                title: "Professionalism",
-                desc: "Discretion, respect, and courtesy define our approach."
-              }
-            ].map((value, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition-shadow">
-                <div className="flex justify-center">{value.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{value.title}</h3>
-                <p className="text-gray-600">{value.desc}</p>
-              </div>
-            ))}
+      {/* Reframed Lawyers10on10 Section */}
+      <div className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">About Lawyers10on10</h2>
+          <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">
+            Lawyers10on10 is India’s leading digital legal consultancy platform connecting clients to top-tier legal professionals. From individual disputes to business matters, we provide secure, transparent, and immediate access to legal advice—anytime, anywhere.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Verified Experts Across India</h3>
+              <p className="text-gray-700 text-lg mb-4">
+                Our network includes Bar Council–registered advocates from every region of India—urban to rural—specializing in civil, criminal, corporate, family, property, tax, and technology law.
+              </p>
+              <p className="text-gray-700 text-lg">
+                Every lawyer undergoes a strict verification process before being approved, ensuring only credible and legally compliant professionals represent our clients.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Secure and Instant Legal Access</h3>
+              <p className="text-gray-700 text-lg mb-4">
+                Users can connect instantly with a lawyer via secure chat or call. Whether you're facing an urgent legal issue or need routine guidance, we ensure quick, discreet, and expert consultation.
+              </p>
+              <p className="text-gray-700 text-lg">
+                We cater to Indian citizens, NRIs, startups, and businesses—with no jargon, no delays, and no hidden charges.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Why Choose Us?</h3>
+            <ul className="text-lg text-gray-700 leading-relaxed list-disc list-inside max-w-3xl mx-auto text-left">
+              <li>Verified & licensed lawyers from 29 states and UTs</li>
+              <li>Multiple legal domains supported (civil, corporate, family law, and more)</li>
+              <li>Instant consultations via secure chat or call</li>
+              <li>Transparent pricing and fair legal practices</li>
+              <li>Thousands of satisfied users across India</li>
+              <li>Compliance with Bar Council regulations</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -222,7 +207,10 @@ const AboutUs = () => {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Our team is here to provide the expert guidance you need to navigate complex legal challenges.
         </p>
-        <button className="bg-gradient-to-r from-[#000080] to-blue-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors" onClick={() => window.location.href = "https://law-consultancy-firms-git-law-ashish8.vercel.app/"}>
+        <button
+          className="bg-gradient-to-r from-[#000080] to-blue-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors"
+          onClick={() => window.location.href = "https://law-consultancy-firms-git-law-ashish8.vercel.app/"}
+        >
           Schedule a Consultation
         </button>
       </div>
