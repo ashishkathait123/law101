@@ -222,7 +222,7 @@ const AboutUs = () => {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Our team is here to provide the expert guidance you need to navigate complex legal challenges.
         </p>
-        <button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors" onClick={() => window.location.href = "https://law-consultancy-firms-git-law-ashish8.vercel.app/"}>
+        <button className="bg-gradient-to-r from-[#000080] to-blue-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors" onClick={() => window.location.href = "https://law-consultancy-firms-git-law-ashish8.vercel.app/"}>
           Schedule a Consultation
         </button>
       </div>

@@ -93,7 +93,7 @@ const HomeHero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <motion.button
-              className="bg-gradient-to-r from-[#0a1f44] to-[#1e3a8a] text-white px-12 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-[#000080] to-blue-700 text-white px-12 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)",
