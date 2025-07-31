@@ -55,9 +55,9 @@ function Feedbacks() {
   };
 
   const stats = [
-    { value: "200+", label: "Trusted Professionals" },
-    { value: "50+", label: "Cities Covered" },
-    { value: "10/10", label: "Verified Ratings" },
+    { value: "10000+", label: "Trusted Professionals" },
+    { value: "28+", label: "States Covered" },
+    { value: "10/10", label: "Platform Ratings" },
     { value: "24/7", label: "Support Available" }
   ];
 
@@ -130,7 +130,7 @@ function Feedbacks() {
             },
             { icon: <FiAward className="text-[#000080] text-2xl" />, 
               title: "Proven Track Records", 
-              text: "Our lawyers maintain exceptional success rates and client satisfaction scores, with transparent reviews from real clients." 
+              text: "Our platform maintain exceptional success rates and client satisfaction scores, with transparent reviews from real clients." 
             },
             { icon: <FiMapPin className="text-[#000080] text-2xl" />, 
               title: "Nationwide Coverage", 

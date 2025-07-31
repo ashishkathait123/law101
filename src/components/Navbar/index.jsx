@@ -32,7 +32,7 @@ const Navbar = () => {
     { id: "about", label: "About Us" },
     { id: "chat", label: "Chat With Lawyer" },
     { id: "call", label: "Call With Lawyer" },
-    { id: "document", label: "Documentary Lawyers" },
+    { id: "document", label: " Legal Documentary" },
     { id: "allotment", label: "Hire A Lawyer" },
     // { id: "appointment", label: "Book Appointment" },
   ];

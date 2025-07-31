@@ -122,40 +122,26 @@ const LawyerCarousel = () => {
 
       {/* Attractive Heading Section */}
       <div className="text-center mb-10 px-4">
-        <motion.h2
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#000080] mb-6"
+       <motion.h3
+  className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 md:mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-purple-700 to-red-600"
+  variants={{
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { delay: 0.2, duration: 0.6 }
+    },
+    hidden: { opacity: 0, y: 30 }
+  }}
 >
+  Talk To{' '}
   <span className="relative inline-block">
-    <motion.span 
-      className="relative z-10"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.3, duration: 0.8 }}
-    >
-      Talk To BCI Verified Legal Experts
-    </motion.span>
-    <motion.span 
-      className="absolute bottom-0 left-0 w-0 h-3 bg-yellow-300 z-0 origin-left"
-      initial={{ width: 0 }}
-      animate={{ width: "100%" }}
-      transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-      style={{ 
-        transform: "rotate(-1deg)",
-        background: "linear-gradient(90deg, rgba(255,215,0,0.8) 0%, rgba(255,255,0,0.6) 100%)"
-      }}
-    />
-    <motion.span 
-      className="absolute -bottom-1 left-0 w-full h-1 bg-blue-500/30 z-0"
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      transition={{ delay: 0.7, duration: 0.6 }}
-      style={{ transformOrigin: "left center" }}
-    />
-  </span>
-</motion.h2>
+    <span className="relative z-10 px-2 text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-md shadow-md">
+      BCI Registered
+    </span>
+    <span className="absolute inset-0 transform -skew-x-6 bg-yellow-300/60 z-0 rounded-md blur-sm animate-pulse" />
+  </span>{' '}
+  Legal Experts
+</motion.h3>
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

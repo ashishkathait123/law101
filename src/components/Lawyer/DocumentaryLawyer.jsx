@@ -118,9 +118,25 @@ useEffect(() => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mt-28">
-      <h2 className="text-3xl font-bold text-center text-[#000080] mb-6">
-        Our Lawyers
-      </h2>
+      <motion.h2 
+  className="text-4xl sm:text-5xl font-extrabold text-center mb-8 mt-16"
+  initial={{ opacity: 0, y: -20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <span className="relative inline-block">
+    <h4>Coming Soon...</h4>
+    <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#000080] via-[#1e3a8a] to-[#000066] px-2">
+      Our Lawyers
+    </span>
+    <span className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-[#3b82f6] to-[#9333ea] opacity-70 rounded-full z-0 transform -rotate-1" />
+    <span className="absolute -bottom-1 left-0 w-full h-1 bg-white/30 rounded-full z-0" />
+  </span>
+  
+  {/* Decorative elements */}
+  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#000080]/20 rounded-full" />
+  <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#000080]/10 rounded-full" />
+</motion.h2>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-6 bg-white shadow-sm p-4 rounded-xl border border-[#000080]/10">
         <input

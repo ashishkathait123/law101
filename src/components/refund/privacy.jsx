@@ -6,7 +6,7 @@ const Privacy = () => {
       <h1 className="text-3xl font-bold text-blue-800 mb-4">Privacy Policy</h1>
 
       <p className="text-gray-700 mb-4">
-        <strong>Lawyers10010</strong> values your privacy. All online consultations are secure, confidential, and encrypted.
+        <strong>Lawyers10on10</strong> values your privacy. All online consultations are secure, confidential, and encrypted.
       </p>
 
       <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Data Protection</h2>

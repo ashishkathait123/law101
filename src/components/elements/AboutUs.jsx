@@ -16,7 +16,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Our Law Consultancy</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Delivering exceptional legal solutions with integrity, expertise, and client-focused service since 2005.
+            Delivering exceptional legal solutions with integrity, expertise, and client-focused service.
           </p>
         </div>
       </div>
@@ -32,12 +32,11 @@ const AboutUs = () => {
               <GiJusticeStar className="mr-3 text-blue-600" />
               Our Founder's Vision
             </h2>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">John A. Harrison, Esq.</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Astha Rayal.</h3>
             <p className="text-gray-600 mb-4 text-lg">
-              "I founded this firm with a simple belief: legal counsel should empower clients, not intimidate them. 
-              After 25 years in practice, I've seen how the right guidance can transform businesses and lives."
+              ""I started this platform with a clear mission — to make legal consultation simple, accessible, and hassle-free for every client. After 10+ years in the field, I’ve seen firsthand how timely legal support can change lives and protect futures without adding stress."
             </p>
-            <div className="space-y-4 mt-6">
+            {/* <div className="space-y-4 mt-6">
               <div className="flex items-start">
                 <FaGraduationCap className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
                 <div>
@@ -68,13 +67,13 @@ const AboutUs = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Our Story */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -98,7 +97,7 @@ const AboutUs = () => {
             <img src={team} alt="Our Office" className="h-full w-full object-cover" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Reframed Lawyers10on10 Section */}
       <div className="bg-white py-20">
@@ -124,7 +123,7 @@ const AboutUs = () => {
                 Users can connect instantly with a lawyer via secure chat or call. Whether you're facing an urgent legal issue or need routine guidance, we ensure quick, discreet, and expert consultation.
               </p>
               <p className="text-gray-700 text-lg">
-                We cater to Indian citizens, NRIs, startups, and businesses—with no jargon, no delays, and no hidden charges.
+                We cater to Indian citizens, no delays, and no hidden charges.
               </p>
             </div>
           </div>
@@ -132,7 +131,7 @@ const AboutUs = () => {
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Why Choose Us?</h3>
             <ul className="text-lg text-gray-700 leading-relaxed list-disc list-inside max-w-3xl mx-auto text-left">
-              <li>Verified & licensed lawyers from 29 states and UTs</li>
+              <li>Verified & licensed lawyers from 28 states and 8UTs</li>
               <li>Multiple legal domains supported (civil, corporate, family law, and more)</li>
               <li>Instant consultations via secure chat or call</li>
               <li>Transparent pricing and fair legal practices</li>
@@ -144,7 +143,7 @@ const AboutUs = () => {
       </div>
 
       {/* Our Team */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Leadership</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -179,7 +178,7 @@ const AboutUs = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Achievements */}
       <div className="bg-[#1c1c84] text-white py-16">
@@ -187,10 +186,10 @@ const AboutUs = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Achievements</h2>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "500+", label: "Clients Served" },
+              { number: "24/7", label: "Legal Assistance" },
               { number: "95%", label: "Case Success Rate" },
-              { number: "25+", label: "Legal Experts" },
-              { number: "18", label: "Years in Practice" }
+              { number: "10000+", label: "Legal Experts" },
+              { number: "28 States and", label: "8 UT'S" }
             ].map((stat, index) => (
               <div key={index} className="p-4">
                 <p className="text-4xl font-bold mb-2">{stat.number}</p>
@@ -211,7 +210,7 @@ const AboutUs = () => {
           className="bg-gradient-to-r from-[#000080] to-blue-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors"
           onClick={() => window.location.href = "https://law-consultancy-firms-git-law-ashish8.vercel.app/"}
         >
-          Schedule a Consultation
+          Talk To A Lawyer
         </button>
       </div>
     </div>

@@ -61,21 +61,21 @@ const navigate = useNavigate();
                     <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                         India's Leading Legal Platform
                     </div>
-                    <motion.h1 
-                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+                    <motion.h3 
+                        className="text-xl sm:text-xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
                         Legal Solutions at <span className="text-blue-800">Your Fingertips</span>
-                    </motion.h1>
+                    </motion.h3>
                     <motion.p 
                         className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
-                        Lawyers10on10 connects you with India's top-rated, verified lawyers across 25+ practice areas. 
+                        Lawyers10on10 connects you with India's, verified lawyers across 25+ practice areas. 
                         Get expert legal advice instantly, anytime, anywhere.
                     </motion.p>
                     <motion.div 
@@ -114,10 +114,10 @@ const navigate = useNavigate();
                                 <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 Bar Council verified credentials
                             </li>
-                            <li className="flex items-start">
+                            {/* <li className="flex items-start">
                                 <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 Minimum 4.5/5 client rating
-                            </li>
+                            </li> */}
                             <li className="flex items-start">
                                 <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 Background and experience checks
@@ -138,13 +138,13 @@ const navigate = useNavigate();
                             <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
                                 <FaClock size={24} />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900">Legal Documentary Support</h3>
+                            <h3 className="text-xl font-bold text-gray-900">Instant Legal Support</h3>
                         </div>
                         <p className="text-gray-700 mb-6">
                             Connect with lawyers in under 15 minutes through multiple channels.
                         </p>
                         <div className="grid grid-cols-2 gap-3">
-                            {['Live Chat', 'Video Call', 'Phone Consultation', 'Document Review'].map((item, i) => (
+                            {['Live Chat', 'Live Call', 'Phone Consultation', 'Document Review'].map((item, i) => (
                                 <span key={i} className="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-sm font-medium">
                                     {item}
                                 </span>
@@ -152,7 +152,7 @@ const navigate = useNavigate();
                         </div>
                     </motion.div>
 
-                    <motion.div 
+          <motion.div 
     className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all"
     whileHover={{ y: -5 }}
     variants={fadeIn}
@@ -165,14 +165,16 @@ const navigate = useNavigate();
         <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
             <FaHandshake size={24} />
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Trusted Law Firms</h3>
+        <h3 className="text-xl font-bold text-gray-900">Transparent Pricing</h3>
     </div>
     <p className="text-gray-700">
-    Connect with verified, experienced law firms committed to client success and ethical practice.  
-    Each firm on our platform is thoroughly vetted to ensure quality service, professionalism, and legal expertise.  
-    Whether you need help with civil matters, corporate issues, or personal legal advice.
-</p>
+        No hidden fees. No surprises. We’re committed to clear, upfront pricing so you always know what you're paying for.  
+        From consultations to complete legal services, every charge is detailed in advance.  
+        You’ll also receive a digital invoice after every payment—keeping your legal expenses organized and fully transparent.
+    </p>
 </motion.div>
+
+
 
 
                     <motion.div 
@@ -218,10 +220,10 @@ const navigate = useNavigate();
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-center">
-                                    <FaHeadset className="mr-4 text-2xl text-blue-300" />
+                                    {/* <FaHeadset className="mr-4 text-2xl text-blue-300" /> */}
                                     <div>
-                                        <p className="font-semibold">24/7 Emergency Helpline</p>
-                                        <p className="text-blue-200">1800-XXX-XXXX (Toll-free)</p>
+                                        {/* <p className="font-semibold">24/7 Emergency Helpline</p> */}
+                                        {/* <p className="text-blue-200">1800-XXX-XXXX (Toll-free)</p> */}
                                     </div>
                                 </div>
                                 <div className="flex items-center">
@@ -286,7 +288,7 @@ const navigate = useNavigate();
                         ))}
                     </div>
                     <p className="text-gray-700 max-w-3xl mx-auto text-center text-lg">
-                        From routine legal matters to complex litigation, our network of 40+ specialized attorneys covers every aspect of Indian law.
+                        From routine legal matters to complex litigation, our network of specialized Lawyers covers every aspect of Indian law.
                     </p>
                 </motion.div>
 
@@ -333,9 +335,16 @@ const navigate = useNavigate();
                     viewport={{ once: true }}
                 >
                     <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Resolve Your Legal Matter?</h3>
-                    <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                        Join thousands of satisfied clients who found the right legal solution through Lawyers10 on 10.
-                    </p>
+                    <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+  Join thousands of satisfied clients who found the right legal solution through{" "}
+  <span className="relative inline-block">
+    <span className="relative z-10 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+      Lawyers10<span className="text-blue-500">on10</span>
+    </span>
+    <span className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-purple-300 to-blue-400 rounded-full z-0 opacity-80 transform -rotate-1" />
+    <span className="absolute -bottom-1 left-0 w-full h-1 bg-blue-100/50 rounded-full z-0" />
+  </span>.
+</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <motion.button 
           className="px-6 py-3 bg-gradient-to-r from-[#000080] to-blue-700 text-white rounded-lg hover:from-[#000080]/90 hover:to-blue-700/90 transition-all shadow-md flex items-center"
