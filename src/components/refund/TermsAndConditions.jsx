@@ -11,7 +11,7 @@ import {
 
 const TermsAndConditions = () => {
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-12">
+    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-28">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 sm:p-8">
         <div className="text-center mb-10">
           <div className="flex justify-center text-[#000080] mb-4">
