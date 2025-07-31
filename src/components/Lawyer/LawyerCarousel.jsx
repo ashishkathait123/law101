@@ -122,17 +122,40 @@ const LawyerCarousel = () => {
 
       {/* Attractive Heading Section */}
       <div className="text-center mb-10 px-4">
-        <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-[#000080] mb-4"
-        >
-          <span className="relative inline-block">
-            <span className="relative z-10">Talk To a BCI Vrified Legal Experts</span>
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300/60 z-0 transform -rotate-1"></span>
-          </span>
-        </motion.h2>
+        <motion.h2
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#000080] mb-6"
+>
+  <span className="relative inline-block">
+    <motion.span 
+      className="relative z-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.8 }}
+    >
+      Talk To BCI Verified Legal Experts
+    </motion.span>
+    <motion.span 
+      className="absolute bottom-0 left-0 w-0 h-3 bg-yellow-300 z-0 origin-left"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+      style={{ 
+        transform: "rotate(-1deg)",
+        background: "linear-gradient(90deg, rgba(255,215,0,0.8) 0%, rgba(255,255,0,0.6) 100%)"
+      }}
+    />
+    <motion.span 
+      className="absolute -bottom-1 left-0 w-full h-1 bg-blue-500/30 z-0"
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ delay: 0.7, duration: 0.6 }}
+      style={{ transformOrigin: "left center" }}
+    />
+  </span>
+</motion.h2>
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
