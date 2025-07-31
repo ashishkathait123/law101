@@ -101,6 +101,15 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+{/* Lawyers10on10 Detailed About Us Section */}
+<div className="bg-white py-16">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl font-bold text-gray-900 mb-6">About Lawyers10on10</h2>
+    <p className="text-lg text-gray-700 leading-relaxed">
+      Lawyers10on10 is the best website for online legal consultations. It has a team of top verified lawyers, including court experts, from across India. You can connect with a lawyer through call or chat and get accurate answers to all your legal queries—instantly and securely.
+    </p>
+  </div>
+</div>
 
       {/* Our Values */}
       <div className="bg-white py-16">

@@ -46,11 +46,12 @@ const GetUpdates = () => {
                         Legal Solutions at Your <span className="text-[#FF6B00]">Fingertips</span>
                     </h5> */}
                     <p className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto">
-                        India's premier digital legal platform connecting you with top-rated, verified lawyers across 25+ practice areas. 
+                        Lawyers10on10 connects you with the best verified lawyers across India in seconds. Tap, talk, and trust – all online. India's premier digital legal platform connecting you with top-rated, verified lawyers across 25+ practice areas. 
                         Get expert legal advice instantly, anytime, anywhere.
                     </p>
                     <div className="inline-flex items-center bg-[#000080]/10 text-[#000080] px-6 py-3 rounded-full text-sm font-semibold">
                         <FaShieldAlt className="mr-2" />
+                        
                         Trusted by 50,000+ clients · 98% Satisfaction Rate · 24/7 Availability
                     </div>
                 </div>
