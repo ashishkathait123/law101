@@ -9,18 +9,18 @@ import { useHref } from 'react-router-dom';
 
 const GetUpdates = () => {
     const practiceAreas = [
-        { name: 'Family Law', icon: <FaBalanceScale className="text-blue-500" /> },
-        { name: 'Property Disputes', icon: <FaFileContract className="text-blue-500" /> },
-        { name: 'Criminal Defense', icon: <FaShieldAlt className="text-blue-500" /> },
-        { name: 'Corporate Law', icon: <FaChartLine className="text-blue-500" /> },
-        { name: 'Divorce Cases', icon: <FaBalanceScale className="text-blue-500" /> },
-        { name: 'Cyber Crime', icon: <FaShieldAlt className="text-blue-500" /> },
-        { name: 'Startup Legal', icon: <FaChartLine className="text-blue-500" /> },
-        { name: 'Immigration', icon: <FaFileContract className="text-blue-500" /> },
-        { name: 'Taxation', icon: <GiMoneyStack className="text-blue-500" /> },
-        { name: 'Intellectual Property', icon: <FaFileContract className="text-blue-500" /> },
-        { name: 'Employment Law', icon: <FaUserTie className="text-blue-500" /> },
-        { name: 'Consumer Protection', icon: <FaShieldAlt className="text-blue-500" /> }
+        { name: 'Family Law', icon: <FaBalanceScale className="text-blue-700" /> },
+        { name: 'Property Disputes', icon: <FaFileContract className="text-blue-700" /> },
+        { name: 'Criminal Defense', icon: <FaShieldAlt className="text-blue-700" /> },
+        { name: 'Corporate Law', icon: <FaChartLine className="text-blue-700" /> },
+        { name: 'Divorce Cases', icon: <FaBalanceScale className="text-blue-700" /> },
+        { name: 'Cyber Crime', icon: <FaShieldAlt className="text-blue-700" /> },
+        { name: 'Startup Legal', icon: <FaChartLine className="text-blue-700" /> },
+        { name: 'Immigration', icon: <FaFileContract className="text-blue-700" /> },
+        { name: 'Taxation', icon: <GiMoneyStack className="text-blue-700" /> },
+        { name: 'Intellectual Property', icon: <FaFileContract className="text-blue-700" /> },
+        { name: 'Employment Law', icon: <FaUserTie className="text-blue-700" /> },
+        { name: 'Consumer Protection', icon: <FaShieldAlt className="text-blue-700" /> }
     ];
 
     const testimonials = [
@@ -66,7 +66,7 @@ const GetUpdates = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                        Legal Solutions at <span className="text-blue-600">Your Fingertips</span>
+                        Legal Solutions at <span className="text-blue-800">Your Fingertips</span>
                     </motion.h1>
                     <motion.p 
                         className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed"
@@ -322,7 +322,7 @@ const GetUpdates = () => {
                                     ))}
                                 </div>
                                 <p className="text-gray-700 italic text-lg mb-6">"{testimonial.quote}"</p>
-                                <p className="text-blue-600 font-semibold">{testimonial.author}</p>
+                                <p className="text-blue-700 font-semibold">{testimonial.author}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -342,7 +342,7 @@ const GetUpdates = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <motion.button 
-                            className="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg text-lg"
+          className="px-6 py-3 bg-gradient-to-r from-[#000080] to-blue-700 text-white rounded-lg hover:from-[#000080]/90 hover:to-blue-700/90 transition-all shadow-md flex items-center"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
