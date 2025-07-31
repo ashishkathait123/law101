@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 import { GiMoneyStack } from 'react-icons/gi';
 import { useHref } from 'react-router-dom';
-
+import { useNavigate  } from 'react-router-dom';
 const GetUpdates = () => {
     const practiceAreas = [
         { name: 'Family Law', icon: <FaBalanceScale className="text-blue-700" /> },
@@ -22,6 +22,7 @@ const GetUpdates = () => {
         { name: 'Employment Law', icon: <FaUserTie className="text-blue-700" /> },
         { name: 'Consumer Protection', icon: <FaShieldAlt className="text-blue-700" /> }
     ];
+const navigate = useNavigate();
 
     const testimonials = [
         {
@@ -246,6 +247,8 @@ const GetUpdates = () => {
                                 className="bg-white text-blue-800 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                  onClick={() => navigate('/hire-lawyer')}
+
                             >
                                 Emergency Assistance
                             </motion.button>
@@ -253,6 +256,8 @@ const GetUpdates = () => {
                                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                  onClick={() => window.location.href = "https://law-consultancy-firms-git-low3-ashish8.vercel.app/"}
+
                             >
                                 Schedule Consultation
                             </motion.button>
@@ -345,6 +350,8 @@ const GetUpdates = () => {
           className="px-6 py-3 bg-gradient-to-r from-[#000080] to-blue-700 text-white rounded-lg hover:from-[#000080]/90 hover:to-blue-700/90 transition-all shadow-md flex items-center"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                              onClick={() => navigate('/chat')}
+
                         >
                             Speak to a Lawyer Now
                         </motion.button>
@@ -352,6 +359,8 @@ const GetUpdates = () => {
                             className="border-2 border-blue-600 text-blue-600 px-10 py-5 rounded-xl font-bold hover:bg-blue-50 transition-colors text-lg"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                              onClick={() => navigate('/chat')}
+
                         >
                             Browse Legal Experts
                         </motion.button>

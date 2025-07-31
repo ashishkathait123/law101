@@ -151,7 +151,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() =>
                 window.open(
-                  "https://law-consultancy-firms-git-law-ashish8.vercel.app/",
+                  "https://law-consultancy-firms-git-low3-ashish8.vercel.app/",
                   "_blank"
                 )
               }
