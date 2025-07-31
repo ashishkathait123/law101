@@ -57,8 +57,8 @@ const GetUpdates = () => {
                 </div>
 
                 {/* Value Proposition Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                    <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
+                {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"> */}
+                    {/* <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
                         <div className="flex items-center mb-4">
                             <div className="bg-[#000080] text-white p-3 rounded-full mr-4">
                                 <FaUserTie size={20} />
@@ -82,8 +82,8 @@ const GetUpdates = () => {
                                 Background and experience checks
                             </li>
                         </ul>
-                    </div>
-
+                    </div> */}
+{/* 
                     <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
                         <div className="flex items-center mb-4">
                             <div className="bg-[#000080] text-white p-3 rounded-full mr-4">
@@ -100,9 +100,9 @@ const GetUpdates = () => {
                             <span className="bg-[#000080]/5 text-[#000080] px-3 py-1 rounded-full text-xs font-medium">Phone Consultation</span>
                             <span className="bg-[#000080]/5 text-[#000080] px-3 py-1 rounded-full text-xs font-medium">Document Review</span>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
+                    {/* <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
                         <div className="flex items-center mb-4">
                             <div className="bg-[#000080] text-white p-3 rounded-full mr-4">
                                 <FaHandshake size={20} />
@@ -126,9 +126,9 @@ const GetUpdates = () => {
                                 <span className="font-semibold">₹1,500-3,000</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
+                    {/* <div className="bg-[#F8FAFF] p-6 rounded-xl border border-[#000080]/10 hover:shadow-lg transition-all">
                         <div className="flex items-center mb-4">
                             <div className="bg-[#000080] text-white p-3 rounded-full mr-4">
                                 <FaLock size={20} />
@@ -142,8 +142,8 @@ const GetUpdates = () => {
                             <span className="bg-green-100 text-green-800 px-2 py-1 rounded mr-2">Secure</span>
                             <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Encrypted</span>
                         </div>
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
 
                 {/* Emergency CTA Section */}
                 <div className="bg-gradient-to-r from-[#000080] to-[#0066CC] text-white p-8 rounded-xl mb-16">

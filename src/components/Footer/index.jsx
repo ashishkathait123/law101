@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-white">
        {/* Optional About Section (commented out) */}
-      
+{/*       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-[#000080]">
         <h4 className="text-xl font-bold mb-4 text-center">About LegalConnect</h4>
         <p className="text-sm text-gray-700 leading-relaxed text-center">
@@ -13,7 +13,7 @@ const Footer = () => {
           Whether it's criminal law, family issues, property disputes, or startup consultation—LegalConnect ensures reliable
           legal advice from the comfort of your home. Available 24/7 for every Indian in need of justice.
         </p>
-      </div>
+      </div> */}
       {/* Top Footer Section */}
       <div className="bg-[#1c1c84] w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-12 text-white">
         <div className="max-w-7xl mx-auto">
@@ -49,12 +49,12 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Our Details</h3>
               <address className="not-italic space-y-3">
                 <p>
-                  Bangali Kothi<br />
-                  Dehradun, 248001
+                  ...<br />
+                  Dehradun
                 </p>
-                <a href="mailto:temp@gmail.com" className="hover:underline">temp@gmail.com</a><br />
-<a href="tel:+919876543210" className="hover:underline">
-  +91 9876543210
+                <a href="mailto:xxxxx@gmail.com" className="hover:underline">xxxxx@gmail.com</a><br />
+<a href="tel:+919389115137" className="hover:underline">
+  +91 9389115137
 </a>              </address>
             </div>
 
