@@ -117,9 +117,9 @@ useEffect(() => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mt-28">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mt-20">
       <motion.h2 
-  className="text-4xl sm:text-5xl font-extrabold text-center mb-8 mt-16"
+  className="text-4xl sm:text-5xl font-extrabold text-center mb-8 mt-8"
   initial={{ opacity: 0, y: -20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}

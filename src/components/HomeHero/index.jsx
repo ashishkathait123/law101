@@ -29,8 +29,8 @@ const HomeHero = () => {
 
   const optionStyles = {
     chat: {
-      bgFrom: "from-pink-500",
-      bgTo: "to-pink-600",
+      bgFrom: "from-yellow-500",
+      bgTo: "to-yellow-600",
       hoverBg: "rgba(236, 72, 153, 0.1)",
       textColor: "text-pink-600",
       iconColor: "text-pink-500",
@@ -43,8 +43,8 @@ const HomeHero = () => {
       iconColor: "text-green-500",
     },
     document: {
-      bgFrom: "from-orange-300",
-      bgTo: "to-orange-400",
+      bgFrom: "from-purple-300",
+      bgTo: "to-blue-400",
       hoverBg: "rgba(249, 115, 22, 0.1)",
       textColor: "text-orange-600",
       iconColor: "text-orange-500",
