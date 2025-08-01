@@ -60,7 +60,7 @@ const validLawyers = lawyersData; // or a smarter filter if needed
   }, [searchTerm, selectedSpecialization, lawyers]);
 
   const viewProfile = (lawyer) => {
-    navigate('/profile', { state: { lawyer } });
+    navigate('/profile1', { state: { lawyer } });
   };
 
   const handleContactClick = (lawyer) => {

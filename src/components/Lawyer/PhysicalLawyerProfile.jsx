@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   FaBalanceScale,
   FaGavel,
@@ -9,14 +9,17 @@ import {
   FaComments,
   FaRegStar,
   FaStar,
+  FaMapMarkerAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
-const API_BASE_URL = "https://lawyerbackend-qrqa.onrender.com";
+const API_BASE_URL = "https://lawyerbackend-qrqa.onrender.com/lawapi";
 
-const ProfilePage = () => {
+const PhysicalLawyerProfile = () => {
   const { state } = useLocation();
   const { lawyer } = state || {};
+  const navigate = useNavigate();
 
   const getStatusStyles = (status) => {
     switch (status?.toLowerCase()) {
@@ -26,7 +29,7 @@ const ProfilePage = () => {
           bgColor: "bg-green-100",
           label: "Online",
           buttonClass: "bg-[#000080] hover:bg-[#1a1a99] text-white",
-          waitTime: "Wait ~ 5m",
+          waitTime: "Available now",
         };
       case "busy":
         return {
@@ -64,6 +67,12 @@ const ProfilePage = () => {
       <div className="flex items-center justify-center h-screen">
         <div className="text-center text-gray-600">
           No lawyer data found. Please return to the directory.
+          <button 
+            onClick={() => navigate('/physical-lawyers')}
+            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+          >
+            Back to Directory
+          </button>
         </div>
       </div>
     );
@@ -74,21 +83,10 @@ const ProfilePage = () => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
 
-  // Format practice areas from API response
-  const practiceAreas = lawyer?.practiceArea 
-    ? lawyer.practiceArea.split('&').map(area => area.trim()) 
-    : ["Corporate Law", "Litigation", "Contract Law"];
-
-  // Format education data
-  const educationItems = lawyer?.education?.length > 0 
-    ? lawyer.education 
-    : [
-        {
-          degree: "Juris Doctor (J.D.)",
-          institution: "Harvard Law School",
-          year: "2005"
-        }
-      ];
+  // Format practice areas
+  const practiceAreas = lawyer?.practiceArea
+    ? [lawyer.practiceArea] // Single practice area in this API response
+    : ["General Practice"];
 
   return (
     <div className="max-w-6xl mx-auto p-4 md:p-8 mt-16">
@@ -97,9 +95,9 @@ const ProfilePage = () => {
         <div className="bg-gradient-to-r from-blue-900 to-blue-700 p-6 text-white mt-14">
           <div className="flex flex-col md:flex-row items-start md:items-center">
             <div className="relative mb-4 md:mb-0 md:mr-6">
-              {lawyer?.lawyerImage ? (
+              {lawyer?.profileImage ? (
                 <img
-                  src={`${API_BASE_URL}${lawyer.lawyerImage}`}
+                  src={`${API_BASE_URL}/physical-lawyers/images/${lawyer.profileImage}`}
                   alt={lawyer.name}
                   className="h-32 w-32 rounded-full object-cover border-4 border-white"
                   onError={(e) => {
@@ -142,8 +140,8 @@ const ProfilePage = () => {
                   <span>{lawyer?.experience || "5+"} Years Experience</span>
                 </div>
                 <div className="flex items-center">
-                  <FaGlobe className="mr-2" />
-                  <span>English</span>
+                  <FaMapMarkerAlt className="mr-2" />
+                  <span>{lawyer?.city || "Location not specified"}</span>
                 </div>
                 <div className="flex items-center">
                   <FaBalanceScale className="mr-2" />
@@ -188,16 +186,16 @@ const ProfilePage = () => {
               </h2>
               <div className="bg-gray-50 p-5 rounded-lg">
                 <div className="space-y-4">
-                  {educationItems.map((edu, index) => (
-                    <div key={index}>
-                      <h3 className="font-semibold text-gray-800">
-                        {edu.degree || "Juris Doctor (J.D.)"}
-                      </h3>
-                      <p className="text-gray-600">
-                        {edu.institution || "Prestigious Law School"}, {edu.year || "Graduated"}
-                      </p>
-                    </div>
-                  ))}
+                  <div>
+                    <h3 className="font-semibold text-gray-800">
+                      {lawyer?.education || "Law Degree"}
+                    </h3>
+                    <p className="text-gray-600">
+                      {lawyer?.education 
+                        ? "Graduated from prestigious institution" 
+                        : "Education information not provided"}
+                    </p>
+                  </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">
                       Bar Admissions
@@ -236,7 +234,7 @@ const ProfilePage = () => {
 
           {/* Right Column */}
           <div className="space-y-6">
-            <div className="border border-gray-200 rounded-lg p-6 shadow-sm">
+            {/* <div className="border border-gray-200 rounded-lg p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-800 mb-4">
                 Contact Attorney
               </h3>
@@ -275,7 +273,21 @@ const ProfilePage = () => {
                       Call Now
                     </h4>
                     <p className="text-sm text-gray-600">
-                      30 min • ₹{lawyer?.consultation_fees || "400"}
+                      30 min • ₹{lawyer?.consultation_fees || "2000"}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-lg flex items-center bg-gray-100">
+                  <div className="p-3 rounded-full mr-4 text-blue-600 bg-white">
+                    <FaEnvelope size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-800">
+                      Email Address
+                    </h4>
+                    <p className="text-sm text-gray-600 break-all">
+                      {lawyer?.email || "Email not provided"}
                     </p>
                   </div>
                 </div>
@@ -289,18 +301,21 @@ const ProfilePage = () => {
                   Weekend appointments available upon request
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="border border-gray-200 rounded-lg p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-800 mb-4">
-                Location
+                Location Information
               </h3>
               <div className="space-y-2">
                 <p className="text-gray-700">
-                  <span className="font-medium">City:</span> {lawyer?.city || "Not specified"}
+                  <span className="font-medium">Practice Location:</span> {lawyer?.city || "Not specified"}
                 </p>
                 <p className="text-gray-700">
-                  <span className="font-medium">Address:</span> {lawyer?.addressline || "Available upon request"}
+                  <span className="font-medium">Court Jurisdiction:</span> {lawyer?.practiceArea || "Not specified"}
+                </p>
+                <p className="text-gray-700">
+                  <span className="font-medium">Contact Number:</span> {lawyer?.phone || "Not provided"}
                 </p>
               </div>
             </div>
@@ -311,4 +326,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default PhysicalLawyerProfile;

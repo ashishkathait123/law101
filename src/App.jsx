@@ -20,6 +20,7 @@ import Use10on10 from "./components/Feedbacks/hero1";
 import TrustScoreSection from "./components/BenefitsCard/TrustScoreSection";
 import LawyerCarousel from "./components/Lawyer/LawyerCarousel";
 import TermsAndConditions from "./components/refund/TermsAndConditions";
+import PhysicalLawyerProfile from "./components/Lawyer/PhysicalLawyerProfile";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -37,6 +38,7 @@ function App() {
         </Route> */}
         <Route path="/chat" element={<Docter />} />
          <Route path="/profile" element={<ProfilePage />} />
+         <Route path="/profile1" element={<PhysicalLawyerProfile />} />
          <Route path="/document" element={<DocumentaryLawyer />} />
          <Route path="/about" element={<AboutUs />} />
          <Route path="/hire-lawyer" element={<AllotLawyerCard />} />
