@@ -49,10 +49,10 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Our Details</h3>
               <address className="not-italic space-y-3">
                 <p>
-                  ...<br />
+                  <strong>Lawyers10on10</strong><br />
                   Dehradun
                 </p>
-                <a href="mailto:xxxxx@gmail.com" className="hover:underline">xxxxx@gmail.com</a><br />
+                <a href="support@lawyers10on10.com" className="hover:underline">support@lawyers10on10.com</a><br />
 <a href="tel:+919389115137" className="hover:underline">
   +91 9389115137
 </a>              </address>
