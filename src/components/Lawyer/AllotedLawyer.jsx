@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const API_BASE_URL = "https://lawyerbackend-qrqa.onrender.com";
+const API_BASE_URL = "https://api.lawyers10on10.com";
 
 const AllotLawyerCard = () => {
   const [lawyers, setLawyers] = useState([]);

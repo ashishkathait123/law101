@@ -213,8 +213,342 @@ const AboutUs = () => {
           Talk To A Lawyer
         </button>
       </div>
+        <div className="max-w-7xl mx-auto p-6 bg-white">
+      <h1 className="text-3xl font-bold text-blue-800 mb-6">
+        Looking for online legal consultation in India?
+      </h1>
+      
+      <div className="mb-8">
+        <p className="text-gray-700 mb-4">
+          At Lawyers10on10, we provide expert legal advice and assistance to clients in all states and union territories of India. Whether you're in Delhi, Maharashtra, Uttar Pradesh, Punjab, Rajasthan, Karnataka, Tamil Nadu, Gujarat, or West Bengal, our experienced lawyers are just a click away.
+        </p>
+        <p className="text-gray-700">
+          We specialize in delivering timely, reliable, and professional legal solutions—completely online—so you can connect with a lawyer live and get the guidance you need from anywhere in the country.
+        </p>
+      </div>
+
+      <div className="mb-8 p-4 bg-gray-50 rounded-lg">
+        <h2 className="text-xl font-semibold mb-2">Business Name: Lawyers 10 on 10</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          <li>Major Activity: Legal Services (NIC 69100)</li>
+          <li>Service Reach: All States & Union Territories of India</li>
+          <li>Mode of Service: 100% Live Online Legal Consultation</li>
+        </ul>
+        <p className="text-gray-700 mt-2">
+          Lawyers10on10 is a Government-recognized MSME platform connecting clients with expert lawyers for instant, secure, and reliable legal advice across India.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Family Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Family Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Divorce (Mutual Consent & Contested)</li>
+            <li>Child Custody & Guardianship</li>
+            <li>Maintenance & Alimony</li>
+            <li>Domestic Violence Cases</li>
+            <li>Marriage Registration & Legal Advice</li>
+            <li>Restitution of Conjugal Rights</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Matrimonial Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Matrimonial Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Marriage Disputes & Annulments</li>
+            <li>Pre-nuptial & Post-nuptial Agreements</li>
+            <li>Interfaith & Inter-caste Marriage Legal Matters</li>
+            <li>Separation Agreements</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Criminal Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Criminal Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Bail & Anticipatory Bail</li>
+            <li>FIR Registration & Quashing</li>
+            <li>Cheque Bounce (Section 138 NI Act)</li>
+            <li>Cyber Crime & Online Fraud Cases</li>
+            <li>Dowry Harassment (Section 498A IPC)</li>
+            <li>Criminal Appeals & Revisions</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Civil Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Civil Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Property Disputes & Partition</li>
+            <li>Injunctions & Recovery Suits</li>
+            <li>Specific Performance of Contracts</li>
+            <li>Landlord-Tenant Disputes</li>
+            <li>Declaration & Possession Suits</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Corporate & Business Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Corporate & Business Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Company Formation & Compliance</li>
+            <li>Partnership & LLP Disputes</li>
+            <li>Contract Drafting & Review</li>
+            <li>Corporate Governance</li>
+            <li>Business Dispute Resolution</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Labour & Employment Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Labour & Employment Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Wrongful Termination</li>
+            <li>Employment Contract Review</li>
+            <li>Workplace Harassment & Discrimination</li>
+            <li>Industrial Disputes</li>
+            <li>Salary & Wage Recovery</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Consumer Protection Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Consumer Protection Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Filing Consumer Complaints</li>
+            <li>Deficiency of Service Claims</li>
+            <li>Product Liability Cases</li>
+            <li>E-commerce Disputes</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Property & Real Estate Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Property & Real Estate Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Title Search & Property Verification</li>
+            <li>RERA Complaints</li>
+            <li>Builder-Buyer Disputes</li>
+            <li>Sale Deed & Lease Agreement Advice</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Cyber Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Cyber Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Online Fraud & Phishing Complaints</li>
+            <li>Social Media Harassment</li>
+            <li>Data Privacy & IT Act Issues</li>
+            <li>Hacking & Cybersecurity Disputes</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+
+        {/* Taxation Law */}
+        <div className="border border-gray-200 rounded-lg p-4">
+          <h3 className="text-xl font-semibold mb-3 text-blue-700">Taxation Law</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Income Tax Disputes</li>
+            <li>GST Compliance & Disputes</li>
+            <li>Tax Refund Claims</li>
+            <li>Representation before Tax Authorities</li>
+          </ul>
+          <div className="text-center text-gray-400 my-2">⸻</div>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center">
+        <p className="text-lg text-gray-700">
+          💡 And More...<br />
+          These are just a few of the legal areas we handle. Our network of experienced lawyers covers many more specialized and niche matters, ensuring you get the right legal guidance anywhere in India.
+        </p>
+      </div>
+    </div>
     </div>
   );
 };
 
 export default AboutUs;
+
+
+// import React from 'react';
+
+// const AboutUs = () => {
+//   return (
+    // <div className="max-w-7xl mx-auto p-6 bg-white">
+    //   <h1 className="text-3xl font-bold text-blue-800 mb-6">
+    //     Looking for online legal consultation in India?
+    //   </h1>
+      
+    //   <div className="mb-8">
+    //     <p className="text-gray-700 mb-4">
+    //       At Lawyers10on10, we provide expert legal advice and assistance to clients in all states and union territories of India. Whether you're in Delhi, Maharashtra, Uttar Pradesh, Punjab, Rajasthan, Karnataka, Tamil Nadu, Gujarat, or West Bengal, our experienced lawyers are just a click away.
+    //     </p>
+    //     <p className="text-gray-700">
+    //       We specialize in delivering timely, reliable, and professional legal solutions—completely online—so you can connect with a lawyer live and get the guidance you need from anywhere in the country.
+    //     </p>
+    //   </div>
+
+    //   <div className="mb-8 p-4 bg-gray-50 rounded-lg">
+    //     <h2 className="text-xl font-semibold mb-2">Business Name: Lawyers 10 on 10</h2>
+    //     <ul className="list-disc list-inside text-gray-700 space-y-1">
+    //       <li>Major Activity: Legal Services (NIC 69100)</li>
+    //       <li>Service Reach: All States & Union Territories of India</li>
+    //       <li>Mode of Service: 100% Live Online Legal Consultation</li>
+    //     </ul>
+    //     <p className="text-gray-700 mt-2">
+    //       Lawyers10on10 is a Government-recognized MSME platform connecting clients with expert lawyers for instant, secure, and reliable legal advice across India.
+    //     </p>
+    //   </div>
+
+    //   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    //     {/* Family Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Family Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Divorce (Mutual Consent & Contested)</li>
+    //         <li>Child Custody & Guardianship</li>
+    //         <li>Maintenance & Alimony</li>
+    //         <li>Domestic Violence Cases</li>
+    //         <li>Marriage Registration & Legal Advice</li>
+    //         <li>Restitution of Conjugal Rights</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Matrimonial Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Matrimonial Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Marriage Disputes & Annulments</li>
+    //         <li>Pre-nuptial & Post-nuptial Agreements</li>
+    //         <li>Interfaith & Inter-caste Marriage Legal Matters</li>
+    //         <li>Separation Agreements</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Criminal Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Criminal Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Bail & Anticipatory Bail</li>
+    //         <li>FIR Registration & Quashing</li>
+    //         <li>Cheque Bounce (Section 138 NI Act)</li>
+    //         <li>Cyber Crime & Online Fraud Cases</li>
+    //         <li>Dowry Harassment (Section 498A IPC)</li>
+    //         <li>Criminal Appeals & Revisions</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Civil Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Civil Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Property Disputes & Partition</li>
+    //         <li>Injunctions & Recovery Suits</li>
+    //         <li>Specific Performance of Contracts</li>
+    //         <li>Landlord-Tenant Disputes</li>
+    //         <li>Declaration & Possession Suits</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Corporate & Business Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Corporate & Business Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Company Formation & Compliance</li>
+    //         <li>Partnership & LLP Disputes</li>
+    //         <li>Contract Drafting & Review</li>
+    //         <li>Corporate Governance</li>
+    //         <li>Business Dispute Resolution</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Labour & Employment Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Labour & Employment Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Wrongful Termination</li>
+    //         <li>Employment Contract Review</li>
+    //         <li>Workplace Harassment & Discrimination</li>
+    //         <li>Industrial Disputes</li>
+    //         <li>Salary & Wage Recovery</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Consumer Protection Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Consumer Protection Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Filing Consumer Complaints</li>
+    //         <li>Deficiency of Service Claims</li>
+    //         <li>Product Liability Cases</li>
+    //         <li>E-commerce Disputes</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Property & Real Estate Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Property & Real Estate Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Title Search & Property Verification</li>
+    //         <li>RERA Complaints</li>
+    //         <li>Builder-Buyer Disputes</li>
+    //         <li>Sale Deed & Lease Agreement Advice</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Cyber Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Cyber Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Online Fraud & Phishing Complaints</li>
+    //         <li>Social Media Harassment</li>
+    //         <li>Data Privacy & IT Act Issues</li>
+    //         <li>Hacking & Cybersecurity Disputes</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+
+    //     {/* Taxation Law */}
+    //     <div className="border border-gray-200 rounded-lg p-4">
+    //       <h3 className="text-xl font-semibold mb-3 text-blue-700">Taxation Law</h3>
+    //       <ul className="list-disc list-inside text-gray-700 space-y-2">
+    //         <li>Income Tax Disputes</li>
+    //         <li>GST Compliance & Disputes</li>
+    //         <li>Tax Refund Claims</li>
+    //         <li>Representation before Tax Authorities</li>
+    //       </ul>
+    //       <div className="text-center text-gray-400 my-2">⸻</div>
+    //     </div>
+    //   </div>
+
+    //   <div className="mt-8 text-center">
+    //     <p className="text-lg text-gray-700">
+    //       💡 And More...<br />
+    //       These are just a few of the legal areas we handle. Our network of experienced lawyers covers many more specialized and niche matters, ensuring you get the right legal guidance anywhere in India.
+    //     </p>
+    //   </div>
+    // </div>
+//   );
+// };
+
+// export default AboutUs;

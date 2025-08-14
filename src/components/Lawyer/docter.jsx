@@ -16,16 +16,17 @@ const LawyerCard = () => {
   const location = useLocation();
   const interactionMode = location.state?.mode || "chat";
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchLawyers = async () => {
       try {
         const response = await axios.get(`${API_BASE_URL}/lawapi/common/lwayerlist`);
         const lawyersData = Array.isArray(response.data.data) ? response.data.data : [];
         const experiencedLawyers = lawyersData.filter(lawyer => lawyer.experience >= 3);
+
         setLawyers(experiencedLawyers);
         setFilteredLawyers(experiencedLawyers);
       } catch (err) {
-        setError(err.message);
+        console.error("Error fetching lawyers:", err);
       } finally {
         setLoading(false);
       }
