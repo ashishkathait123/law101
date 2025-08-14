@@ -40,7 +40,7 @@ const Footer = () => {
                 </li>
                 <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
                 <li><a href="/chat" className="hover:underline">Chat with lawyer</a></li>
-                <li><a href="/https://law-consultancy-firms-git-low3-ashish8.vercel.app" className="hover:underline">Get Your Consultation</a></li>
+                {/* <li><a href="/https://law-consultancy-firms-git-low3-ashish8.vercel.app" className="hover:underline">Get Your Consultation</a></li> */}
               </ul>
             </div>
 
