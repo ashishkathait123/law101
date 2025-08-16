@@ -6,26 +6,68 @@ const Privacy = () => {
       <h1 className="text-3xl font-bold text-blue-800 mb-4">Privacy Policy</h1>
 
       <p className="text-gray-700 mb-4">
-        <strong>Lawyers10on10</strong> values your privacy. All online consultations are secure, confidential, and encrypted.
+        Your privacy is very important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you shop with us.
       </p>
 
-      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Data Protection</h2>
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">1. Information We Collect</h2>
       <p className="text-gray-700 mb-4">
-        We use industry-standard encryption to protect all communication and personal information shared on our platform.
+        When you place an order or interact with our website, we may collect the following information:
       </p>
+      <ul className="text-gray-700 mb-4 list-disc pl-6">
+        <li>Your name</li>
+        <li>Phone number</li>
+        <li>Email address</li>
+        <li>Shipping and billing address</li>
+        <li>Payment details (processed securely via third-party gateways)</li>
+        <li>Order history and preferences</li>
+        <li>Communication or feedback</li>
+      </ul>
 
-      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Confidentiality</h2>
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">2. How We Use Your Information</h2>
       <p className="text-gray-700 mb-4">
-        All conversations with lawyers are private and are not recorded or shared. We respect client-lawyer confidentiality.
+        We use your information to:
       </p>
+      <ul className="text-gray-700 mb-4 list-disc pl-6">
+        <li>Process and deliver your orders</li>
+        <li>Provide customer support</li>
+        <li>Send order updates and promotional offers (only with your consent)</li>
+        <li>Improve our website and services</li>
+        <li>Comply with legal obligations</li>
+      </ul>
 
-      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Your Control</h2>
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">3. Sharing Your Information</h2>
       <p className="text-gray-700 mb-4">
-        You have full control over your data. You can request access, modification, or deletion of your personal information at any time.
+        We do not sell or rent your personal information to third parties.
+        We may share it only with:
+      </p>
+      <ul className="text-gray-700 mb-4 list-disc pl-6">
+        <li>Trusted service providers (e.g. delivery partners, payment processors) to fulfill your order</li>
+        <li>Government authorities if required by law</li>
+      </ul>
+
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">4. Data Security</h2>
+      <p className="text-gray-700 mb-4">
+        We take reasonable steps to protect your personal data from unauthorized access, misuse, or loss. Payments are securely handled by trusted payment gateways and not stored on our servers.
       </p>
 
-      <p className="text-gray-700 mt-6">
-        If you have any concerns about your privacy, please contact us at <span className="text-blue-600 font-medium">privacy@lawyers10on10.com</span>.
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">5. Cookies</h2>
+      <p className="text-gray-700 mb-4">
+        Our website uses cookies to improve your browsing experience. Cookies help us remember your preferences and track website performance. You can manage or disable cookies in your browser settings.
+      </p>
+
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">6. Your Rights</h2>
+      <p className="text-gray-700 mb-4">
+        You have the right to:
+      </p>
+      <ul className="text-gray-700 mb-4 list-disc pl-6">
+        <li>Access or update your personal information</li>
+        <li>Request deletion of your data (subject to order history and legal requirements)</li>
+        <li>Opt out of marketing communications</li>
+      </ul>
+
+      <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">7. Contact Us</h2>
+      <p className="text-gray-700 mb-4">
+        If you have any questions or concerns about this Privacy Policy, please contact us.
       </p>
     </div>
   );
