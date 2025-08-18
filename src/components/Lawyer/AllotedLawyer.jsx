@@ -18,23 +18,30 @@ const AllotLawyerCard = () => {
   const interactionMode = location.state?.mode || "chat";
 
   useEffect(() => {
-    const fetchLawyers = async () => {
-      try {
-        const response = await axios.get(`${API_BASE_URL}/lawapi/physical-lawyers/getphylawyers`);
-        console.log("lawyer data",response.data);
-// NEW — FIXED
-const lawyersData = Array.isArray(response.data) ? response.data : [];
-console.log("        const lawyersData = Array.isArray(response.data.data) ? response.data.data : [];",lawyersData);
-        // Filter valid and experienced lawyers (>= 0 years)
-const validLawyers = lawyersData; // or a smarter filter if needed
-        setLawyers(validLawyers);
-        setFilteredLawyers(validLawyers);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+   const fetchLawyers = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/lawapi/physical-lawyers/getphylawyers`);
+    console.log("raw API response", response.data);
+
+    let lawyersData = [];
+    if (Array.isArray(response.data)) {
+      lawyersData = response.data;
+    } else if (Array.isArray(response.data?.data)) {
+      lawyersData = response.data.data;
+    } else if (Array.isArray(response.data?.lawyers)) {
+      lawyersData = response.data.lawyers;
+    }
+
+    console.log("parsed lawyers", lawyersData);
+    setLawyers(lawyersData);
+    setFilteredLawyers(lawyersData);
+  } catch (err) {
+    setError(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
     fetchLawyers();
   }, []);

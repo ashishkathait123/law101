@@ -16,31 +16,39 @@ const DocumentaryLawyer = () => {
   const location = useLocation();
   const interactionMode = location.state?.mode || "chat";
 
-  useEffect(() => {
-    const fetchLawyers = async () => {
-      try {
-        const response = await axios.get(
-          `${API_BASE_URL}/lawapi/common/lwayerlist`
-        );
-        const lawyersData = Array.isArray(response.data.data)
-          ? response.data.data
-          : [];
-        const experiencedLawyers = lawyersData.filter(
-          (lawyer) =>
-            lawyer.experience >= 3 &&
-            lawyer.practiceArea === "Documentary Drafting & Legal Documentation"
-        );
-        setLawyers(experiencedLawyers);
-        setFilteredLawyers(experiencedLawyers);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+useEffect(() => {
+const fetchLawyers = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/lawapi/common/lwayerlist`);
+    console.log("raw API response", response.data);
 
-    fetchLawyers();
-  }, []);
+    const lawyersData = Array.isArray(response.data?.data) ? response.data.data : [];
+
+   const experiencedLawyers = lawyersData.filter(
+  (lawyer) =>
+    Number(lawyer.experience) >= 3 &&
+    lawyer.specialization
+      ?.toLowerCase()
+      .includes("documentary drafting & legal documentation".toLowerCase())
+);
+
+
+    console.log("Filtered Lawyers:", experiencedLawyers);
+    setLawyers(experiencedLawyers);
+    setFilteredLawyers(experiencedLawyers);
+  } catch (err) {
+    setError(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
+
+
+
+  fetchLawyers();
+}, []);
+
 
   useEffect(() => {
     let results = lawyers;

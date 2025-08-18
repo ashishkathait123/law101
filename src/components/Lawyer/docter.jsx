@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const API_BASE_URL = "https://lawyerbackend-qrqa.onrender.com";
+const API_BASE_URL = "https://api.lawyers10on10.com";
 
 const LawyerCard = () => {
   const [lawyers, setLawyers] = useState([]);
@@ -20,11 +20,11 @@ const LawyerCard = () => {
     const fetchLawyers = async () => {
       try {
         const response = await axios.get(`${API_BASE_URL}/lawapi/common/lwayerlist`);
-        const lawyersData = Array.isArray(response.data.data) ? response.data.data : [];
-        const experiencedLawyers = lawyersData.filter(lawyer => lawyer.experience >= 3);
+const lawyersData = Array.isArray(response.data.data) ? response.data.data : [];
+setLawyers(lawyersData);
+setFilteredLawyers(lawyersData);
+console.log("Fetched Lawyers:", lawyersData);
 
-        setLawyers(experiencedLawyers);
-        setFilteredLawyers(experiencedLawyers);
       } catch (err) {
         console.error("Error fetching lawyers:", err);
       } finally {
